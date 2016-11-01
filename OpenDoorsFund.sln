@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDoors", "OpenDoors\Open
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDoors.Tests", "OpenDoors.Tests\OpenDoors.Tests.csproj", "{152F02FB-A6F3-4FAB-AB89-6DDD06161189}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenDoors.EntityDb", "OpenDoors.EntityDb\OpenDoors.EntityDb.csproj", "{2AD6D50F-C531-468E-B33F-FF22F2529F78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{152F02FB-A6F3-4FAB-AB89-6DDD06161189}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{152F02FB-A6F3-4FAB-AB89-6DDD06161189}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{152F02FB-A6F3-4FAB-AB89-6DDD06161189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AD6D50F-C531-468E-B33F-FF22F2529F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AD6D50F-C531-468E-B33F-FF22F2529F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AD6D50F-C531-468E-B33F-FF22F2529F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AD6D50F-C531-468E-B33F-FF22F2529F78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

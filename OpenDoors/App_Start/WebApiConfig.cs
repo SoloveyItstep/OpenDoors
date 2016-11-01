@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenDoors.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -13,6 +14,8 @@ namespace OpenDoors
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            //config.Formatters.Add(new BrowserJsonFormatter());
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

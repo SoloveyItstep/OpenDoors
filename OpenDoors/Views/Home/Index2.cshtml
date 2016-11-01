@@ -1,0 +1,18 @@
+﻿@model IEnumerable<OpenDoors.EntityDb.Data.Language>
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+<br />
+<div>
+    <div>
+        @foreach(var item in Model)
+        {
+            <h1>@item.LanguageName</h1><br />
+        }
+    </div>
+</div>
+<div>
+    <h2>@ViewBag.Time</h2>
+</div>

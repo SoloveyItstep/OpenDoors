@@ -14,10 +14,15 @@ namespace OpenDoors
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+                name: "Ru",
+                url: "{language}/{controller}/{action}/{id}",
+                defaults: new { language = "ru", controller = "Home", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "OpenDoors.Areas.ru.Controllers" }
+            ).DataTokens.Add("area","ru");
+
+            //routes.MapRoute
+
+            //namespaces: new[] { "OpenDoors.Arias.en" }
         }
     }
 }
