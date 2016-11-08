@@ -13,6 +13,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var component_1 = require("./component");
 var http_1 = require("@angular/http");
 var CarouselList_1 = require("./CarouselList");
+var volunteer_images_1 = require("./volunteer-images");
 //import './rxjs-operators';
 var AppModule = (function () {
     function AppModule() {
@@ -20,8 +21,8 @@ var AppModule = (function () {
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
-            declarations: [component_1.AppComponent],
-            bootstrap: [component_1.AppComponent],
+            declarations: [component_1.AppComponent, volunteer_images_1.Volunteer],
+            bootstrap: [component_1.AppComponent, volunteer_images_1.Volunteer],
             providers: [CarouselList_1.CarouselList]
         }), 
         __metadata('design:paramtypes', [])

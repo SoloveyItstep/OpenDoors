@@ -7,5 +7,6 @@ export class Carousel implements ICarousel {
     Description: string;
     FullName: string;
     Photo: IPhoto;
+    Url: string;
 }
 

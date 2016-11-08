@@ -1,18 +1,19 @@
 namespace OpenDoors.Migrations
 {
+    using EntityDb;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<OpenDoors.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ContextDb>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(OpenDoors.Models.ApplicationDbContext context)
+        protected override void Seed(ContextDb context)
         {
             //  This method will be called after migrating to the latest version.
 

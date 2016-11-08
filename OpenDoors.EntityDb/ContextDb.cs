@@ -16,7 +16,9 @@ namespace OpenDoors.EntityDb
 
         }
         public ContextDb(String ConnectionName)
-            :base(ConnectionName){ }
+            :base(ConnectionName){
+            //Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<ContextDb>());
+        }
 
         public DbSet<Cover> Cover { get; set; }
         public DbSet<Description> Description { get; set; }
@@ -27,5 +29,9 @@ namespace OpenDoors.EntityDb
         public DbSet<Slider> Slidser { get; set; }
         public DbSet<Volunteer> Volunteer { get; set; }
 
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    Database.SetInitializer<ContextDb>(null);
+        //}
     }
 }

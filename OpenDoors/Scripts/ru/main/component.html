@@ -1,0 +1,46 @@
+﻿<div class='carousel'>
+    <div *ngFor='let car of Carousel; let i = index' class="image"
+         [style.background-image]="['url('+Path(car.Photo.Path)+')']" id="image{{i}}"
+         [class.show-animated]="imageClasses[i]" [class.hide-animated]="!imageClasses[i]">
+        <div class="carousel-info">
+            <div class="text-animated title" [class.showText]="textClasses[i].title"
+                 [class.hideText]="!textClasses[i].title">
+                {{car.Title}}
+            </div><br />
+            <div class="text-animated description" [class.showText]="textClasses[i].text"
+                 [class.hideText]="!textClasses[i].text">
+                {{car.Description}}
+            </div><br />
+            <div class="text-animated name" [class.showText]="textClasses[i].name"
+                 [class.hideText]="!textClasses[i].name">
+                {{car.FullName}}
+            </div>
+            <div class="readmore-button text-animated" [class.showText]="moreButtons[i]"
+                 [class.hideMore]="!moreButtons[i]">
+                <a href="{{car.Url}}" class="more">Подробнее</a>
+            </div>
+        </div>
+    </div>  
+    <div class="slider-buttons">
+        <div class="positionize-square-left">
+            <div class="left-arrow-block" (click)="SliderArrow('left')">
+                <div class="left-arrow diamond-square">
+                    <div class="left-arrow left-arrow-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-numbers">
+            <div class="page-number" (click)="SliderNumber(0)">01</div>
+            <div class="page-number" (click)="SliderNumber(1)">02</div>
+            <div class="page-number" (click)="SliderNumber(2)">03</div>
+            <div class="page-number" (click)="SliderNumber(3)">04</div>
+        </div>
+        <div class="positionize-square-right">
+            <div class="right-arrow-block" (click)="SliderArrow('right')">
+                <div class="right-arrow right-arrow-line"></div>
+                <div class="right-arrow right-square right-square"></div>
+            </div>
+        </div>
+    </div>
+</div>

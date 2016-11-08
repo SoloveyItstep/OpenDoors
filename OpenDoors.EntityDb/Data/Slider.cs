@@ -19,6 +19,9 @@ namespace OpenDoors.EntityDb.Data
         [StringLength(50)]
         public String FullName { get; set; }
 
+        [StringLength(200)]
+        public String Url { get; set; }
+
         public virtual Photo Photo { get; set; }
         
         [Required]

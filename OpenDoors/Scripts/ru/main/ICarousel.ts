@@ -6,4 +6,5 @@ export interface ICarousel {
     Description: string;
     FullName: string;
     Photo: IPhoto;
+    Url: string;
 }

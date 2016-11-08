@@ -25,8 +25,7 @@ namespace OpenDoors
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/animate.css",
-                      "~/Content/bootstrap.css",
-                      "~/Content/Site.css"));
+                      "~/Content/bootstrap.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularEn").Include(
                     "~/node_modules/core-js/client/shim.min.js",

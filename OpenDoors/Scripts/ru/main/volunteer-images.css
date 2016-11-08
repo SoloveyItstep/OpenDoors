@@ -1,0 +1,225 @@
+﻿/*.volunteer-box{
+    width: 90%;
+    height: 250px;
+    z-index: 4;
+    min-width: 1024px;
+}
+.center{
+    text-align:center;
+    margin: 0 auto;
+    height: 100%;
+}
+.center > div{
+    display: inline-block;
+}
+.volunteer-image{
+    height: 250px;    
+}
+.volunteer-image-block{
+    height: 250px;
+}
+.volunteer-info{
+    width: 370px;
+    height: 200px;
+    background-color: #11966f;
+    display: inline-block;
+    margin-right: -4px;
+    padding-top: 40px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.volunteer-info > span{
+    vertical-align: top;
+    font-size: 27px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-family: Intro;
+    top: 10px;
+    color: white;
+    margin-left: 70px;
+}
+.volunteer-line{
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 120px;
+    height: 3px;
+    background-color: white;
+    border-radius: 7px;
+}
+.volunteer-image:hover{
+    cursor: pointer;
+}
+.volunteer-info:hover{
+    cursor: pointer;
+}*/
+
+.volunteer-box{
+    height: 300px;
+    z-index: 2;
+    left: auto;
+    right: auto;
+    position:relative;
+    padding-left: 100px;
+    text-align:center;
+}
+.center{
+    margin-top: -45px;
+    text-align: center;
+    
+}
+.center div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.volunteer-info{
+    text-align: left;
+    width: 400px;
+    height: 200px;
+    background-color: #11966f;
+    padding-top: 40px;
+    padding-left: 70px;
+    margin-right: -4px;
+    color:white;
+    font-family: Intro;
+    font-size: 30px;
+}
+.volunteer-info span{
+    margin-bottom: 20px;
+}
+.volunteer-line{
+    margin-top: 20px;
+    width: 50px;
+    height:3px;
+    background-color: white;
+}
+.volunteer-image-block{
+    height: 300px;
+    
+}
+.volunteer-image{
+    height: 300px;
+}
+.show-block{
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: showBlock;
+  animation-name: showBlock;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  animation-delay: .5s;
+}
+
+@-webkit-keyframes showBlock{
+    0% {
+        opacity: 0;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+@keyframes showBlock{
+    0% {
+        opacity: 0;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+.show-info-block{
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: showInfoBlock;
+  animation-name: showInfoBlock;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  animation-delay: .5s;
+}
+@-webkit-keyframes showInfoBlock{
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+@keyframes showInfoBlock{
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+.hide-block {
+    -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: hideBlock;
+  animation-name: hideBlock;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+@-webkit-keyframes hideBlock{
+    0% {
+        opacity: 1;
+        margin-top: -20px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 0px;
+    }
+}
+@keyframes hideBlock{
+    0% {
+        opacity: 1;
+        margin-top: -20px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 0px;
+    }
+}
+.hide-info-block {
+    -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: hideInfoBlock;
+  animation-name: hideInfoBlock;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+@-webkit-keyframes hideInfoBlock{
+    0% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 20px;
+    }
+}
+@keyframes hideInfoBlock{
+    0% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 20px;
+    }
+}

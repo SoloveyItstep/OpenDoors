@@ -6,7 +6,8 @@
     <title>@ViewBag.Title</title>
     <link type="text/css" href="~/Content/preloader.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
-    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>   
+    @RenderSection("styles",false)
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 
@@ -38,15 +39,23 @@
                 }
                 document.getElementById("progress_width").value = prog_width;
                 $("#bar1").animate({ width: prog_width + "%" }, 10, function () {
-                    if (document.getElementById("bar1").style.width == "100%") {
+                    //var persentages = Math.round(parseInt(document.getElementById("bar1").style.width));
+                    if (Math.round(prog_width) == "100") {
+                        //console.log("100%");
                         $(".progress-preload").fadeOut("slow");
                         var prog = $("#prog");
                         setTimeout(function () {
+                            //prog.css({ 'display': 'none' });
                             prog.addClass("preloadFadeOut");
                             setTimeout(function () {
                                 prog.addClass("hidden");
-                            }, 500);                            
+                                //prog.css({ 'display': 'none' });
+                            }, 500);
                         }, 750);
+                    }
+                    else {
+                       
+                        //console.log(Math.round(prog_width));
                     }
                 });
             }
@@ -57,35 +66,48 @@
         }
     </script>
     <div class="left-panel">
-        <div class="drop-down">
-            <input class="drop-down-toggle" type="text">
-            <div class="drop-down-text">рус</div>
-            <ul class="drop-down-content">
-                <li><a href="#">eng</a></li>
-            </ul>
-        </div>
+        <div class="left-panel-right-menu">
+            <div class="drop-down">
+                <input class="drop-down-toggle" type="text">
+                <div class="drop-down-text">рус</div>
+                <ul class="drop-down-content">
+                    <li><a href="#">eng</a></li>
+                </ul>
+            </div>
 
-        <div class="spinner-master2">
-            <input type="checkbox" id="spinner-form2" />
-            <label for="spinner-form2" class="spinner-spin2 spinner animated fadeOut">
-                <div class="spinner2 diagonal part-1"></div>
-                <div class="spinner2 horizontal"></div>
-                <div class="spinner2 diagonal part-2"></div>
-            </label>
-        </div>
-        
-        <div class="logo-div">
-            <img src="~/Content/Images/logo.png" id="logo"/>
+            <div class="spinner-master2">
+                <input type="checkbox" id="spinner-form2" />
+                <label for="spinner-form2" class="spinner-spin2 spinner animated fadeOut">
+                    <div class="spinner2 diagonal part-1"></div>
+                    <div class="spinner2 horizontal"></div>
+                    <div class="spinner2 diagonal part-2"></div>
+                </label>
+            </div>
+
+            <div class="logo-div">
+                <img src="~/Content/Images/logo.png" id="logo" />
+            </div>
         </div>
 </div>
     <div class="left-tmp"></div>
+    <div id="close-body" onclick="closeBodyClicked()"></div>
     <div class="site-body">
-        <div class="animated top-footer">
-
+        <div class="animated header">
         </div>
         
         @Scripts.Render("~/bundles/angularRu")
         @RenderBody()
+        
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-lg-offset-1">adfasdfasdfasfasfasdfsa fsadfasdfasdfasdfsadfsa dfsadfsadfsdfsadfsadf</div>
+                <div class="col-lg-2 col-lg-offset-1">adfasdfasdfasfasfas dfsafsadfasdfasdfa sdfsadfsadfsadfsadfsdfsadfsadf</div>
+                <div class="col-lg-2 col-lg-offset-1">adfasdfasdfasfasfasd fsafsadfasdfasdfas dfsadfsadfsadfsadfsdfsadfsadf</div>
+                <div class="col-lg-2 col-lg-offset-1">adfasdfasdfasfasfasdf safsadfasdfasdfas dfsadfsadfsadfsadfsdfsadfsadf</div>
+            </div>
+        </div>
     </div>
 </body>
 

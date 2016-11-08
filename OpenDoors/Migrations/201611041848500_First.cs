@@ -3,7 +3,7 @@ namespace OpenDoors.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class firstMigration : DbMigration
+    public partial class First : DbMigration
     {
         public override void Up()
         {

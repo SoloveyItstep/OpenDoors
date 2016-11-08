@@ -242,9 +242,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Inject\AutofacConf.cs" />
-    <Compile Include="Migrations\201610171505201_firstMigration.cs" />
-    <Compile Include="Migrations\201610171505201_firstMigration.Designer.cs">
-      <DependentUpon>201610171505201_firstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\201611041848500_First.cs" />
+    <Compile Include="Migrations\201611041848500_First.Designer.cs">
+      <DependentUpon>201611041848500_First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611041921456_third.cs" />
+    <Compile Include="Migrations\201611041921456_third.Designer.cs">
+      <DependentUpon>201611041921456_third.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -260,17 +264,30 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Fonts\Intro\demo.html" />
+    <Content Include="Content\Fonts\Intro\Intro.svg" />
+    <Content Include="Content\Fonts\Intro\stylesheet.css" />
+    <Content Include="Content\Fonts\OpenSans-Light\demo.html" />
+    <Content Include="Content\Fonts\OpenSans-Light\OpenSans-Light.svg" />
+    <Content Include="Content\Fonts\OpenSans-Light\stylesheet.css" />
+    <Content Include="Content\Fonts\OpenSans-Regular\demo.html" />
+    <Content Include="Content\Fonts\OpenSans-Regular\OpenSans.svg" />
+    <Content Include="Content\Fonts\OpenSans-Regular\stylesheet.css" />
+    <Content Include="Content\Fonts\OpenSans-Semibold\demo.html" />
+    <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.svg" />
+    <Content Include="Content\Fonts\OpenSans-Semibold\stylesheet.css" />
     <Content Include="Content\Images\Carousel\banner1.jpg" />
     <Content Include="Content\Images\Carousel\banner2.jpg" />
     <Content Include="Content\Images\Carousel\banner3.jpg" />
     <Content Include="Content\Images\Carousel\banner4.jpg" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\Main\main_small.jpg" />
     <Content Include="Content\main\AppComponent.css" />
     <Content Include="Content\preloader.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\main-page-style.css" />
     <Content Include="node_modules\core-js\client\shim.min.js" />
     <Content Include="node_modules\reflect-metadata\Reflect.js" />
     <Content Include="node_modules\systemjs\dist\system.src.js" />
@@ -297,6 +314,51 @@
     <Content Include="Areas\en\Views\Home\Index.cshtml" />
     <Content Include="Areas\ru\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\ru\Views\Home\Index.cshtml" />
+    <Content Include="node_modules\.bin\concurrent" />
+    <Content Include="node_modules\.bin\concurrent.cmd" />
+    <Content Include="node_modules\.bin\concurrently" />
+    <Content Include="node_modules\.bin\concurrently.cmd" />
+    <Content Include="node_modules\.bin\hs" />
+    <Content Include="node_modules\.bin\hs.cmd" />
+    <Content Include="node_modules\.bin\http-server" />
+    <Content Include="node_modules\.bin\http-server.cmd" />
+    <Content Include="node_modules\.bin\karma" />
+    <Content Include="node_modules\.bin\karma.cmd" />
+    <Content Include="node_modules\.bin\lite-server" />
+    <Content Include="node_modules\.bin\lite-server.cmd" />
+    <Content Include="node_modules\.bin\protractor" />
+    <Content Include="node_modules\.bin\protractor.cmd" />
+    <Content Include="node_modules\.bin\rimraf" />
+    <Content Include="node_modules\.bin\rimraf.cmd" />
+    <Content Include="node_modules\.bin\tsc" />
+    <Content Include="node_modules\.bin\tsc.cmd" />
+    <Content Include="node_modules\.bin\tslint" />
+    <Content Include="node_modules\.bin\tslint.cmd" />
+    <Content Include="node_modules\.bin\tsserver" />
+    <Content Include="node_modules\.bin\tsserver.cmd" />
+    <Content Include="node_modules\.bin\typings" />
+    <Content Include="node_modules\.bin\typings.cmd" />
+    <Content Include="node_modules\.bin\webdriver-manager" />
+    <Content Include="node_modules\.bin\webdriver-manager.cmd" />
+    <Content Include="Content\Fonts\Intro\Intro.eot" />
+    <Content Include="Content\Fonts\Intro\Intro.ttf" />
+    <Content Include="Content\Fonts\Intro\Intro.woff" />
+    <Content Include="Content\Fonts\Intro\Intro.woff2" />
+    <Content Include="Content\Fonts\Intro\Intro_0.otf" />
+    <Content Include="Content\Fonts\OpenSans-Light\OpenSans-Light.eot" />
+    <Content Include="Content\Fonts\OpenSans-Light\OpenSans-Light.ttf" />
+    <Content Include="Content\Fonts\OpenSans-Light\OpenSans-Light.woff" />
+    <Content Include="Content\Fonts\OpenSans-Light\OpenSans-Light.woff2" />
+    <Content Include="Content\Fonts\OpenSans-Regular\OpenSans-Regular.ttf" />
+    <Content Include="Content\Fonts\OpenSans-Regular\OpenSans.eot" />
+    <Content Include="Content\Fonts\OpenSans-Regular\OpenSans.ttf" />
+    <Content Include="Content\Fonts\OpenSans-Regular\OpenSans.woff" />
+    <Content Include="Content\Fonts\OpenSans-Regular\OpenSans.woff2" />
+    <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.eot" />
+    <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.ttf" />
+    <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff" />
+    <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff2" />
+    <None Include="Properties\PublishProfiles\open doors.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -313,7 +375,22 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\ru\main\component.css" />
+    <Content Include="Scripts\ru\main\component.html" />
+    <Content Include="Scripts\ru\main\Fonts\Intro\demo.html" />
+    <Content Include="Scripts\ru\main\Fonts\Intro\Intro.svg" />
+    <Content Include="Scripts\ru\main\Fonts\Intro\stylesheet.css" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Light\demo.html" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Light\OpenSans-Light.svg" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Light\stylesheet.css" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Regular\demo.html" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Regular\OpenSans.svg" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Regular\stylesheet.css" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\demo.html" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.svg" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\stylesheet.css" />
     <Content Include="Scripts\ru\main\system.config.js" />
+    <Content Include="Scripts\ru\main\volunteer-images.css" />
+    <Content Include="Scripts\ru\main\volunteer.html" />
     <Content Include="Scripts\site.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="systemjs.config.js" />
@@ -355,6 +432,24 @@
     <Content Include="typings.json" />
     <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Shared\_OpenLayout.cshtml" />
+    <Content Include="Scripts\ru\main\Fonts\Intro\Intro.eot" />
+    <Content Include="Scripts\ru\main\Fonts\Intro\Intro.ttf" />
+    <Content Include="Scripts\ru\main\Fonts\Intro\Intro.woff" />
+    <Content Include="Scripts\ru\main\Fonts\Intro\Intro.woff2" />
+    <Content Include="Scripts\ru\main\Fonts\Intro\Intro_0.otf" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Light\OpenSans-Light.eot" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Light\OpenSans-Light.ttf" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Light\OpenSans-Light.woff" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Light\OpenSans-Light.woff2" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Regular\OpenSans-Regular.ttf" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Regular\OpenSans.eot" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Regular\OpenSans.ttf" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Regular\OpenSans.woff" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Regular\OpenSans.woff2" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.eot" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.ttf" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff" />
+    <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -372,11 +467,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610171505201_firstMigration.resx">
-      <DependentUpon>201610171505201_firstMigration.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="Scripts\app\main.ts" />
     <TypeScriptCompile Include="Scripts\en\main.ts" />
     <TypeScriptCompile Include="Scripts\ru\main\Carousel.ts" />
@@ -387,9 +477,18 @@
     <TypeScriptCompile Include="Scripts\ru\main\main.ts" />
     <TypeScriptCompile Include="Scripts\ru\main\module.ts" />
     <TypeScriptCompile Include="Scripts\ru\main\Photo.ts" />
+    <TypeScriptCompile Include="Scripts\ru\main\volunteer-images.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611041848500_First.resx">
+      <DependentUpon>201611041848500_First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611041921456_third.resx">
+      <DependentUpon>201611041921456_third.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
