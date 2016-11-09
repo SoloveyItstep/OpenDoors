@@ -65,8 +65,46 @@
             }
         }
     </script>
+    <div class="animated header">
+        <div class="container header-buttons-container">
+            <div class="row">
+                <div class="header-button-div">
+                    <a class="header-button" id="about-link" href="#">О ФОНДЕ</a>
+                    <div class="header-button-line" id="about-line"></div>
+                </div>
+                <div class="header-button-div">
+                    <a class="header-button" href="#">МЫ ПОМОГАЕМ</a>
+                    <div class="header-button-line"></div>
+                </div>
+                <div class="header-button-div">
+                    <a class="header-button" href="#">НОВОСТИ</a>
+                    <div class="header-button-line"></div>
+                </div>
+                <div class="header-button-div">
+                    <a class="header-button" href="#">ГАЛЕРЕЯ</a>
+                    <div class="header-button-line"></div>
+                </div>
+                <div class="header-button-div">
+                    <a class="header-button" href="#">КОНТАКТЫ</a>
+                    <div class="header-button-line"></div>
+                </div>
+                <div class="header-button-div">
+                    <a class="share-button" href="#">ПОДДЕРЖАТЬ</a>
+                </div>
+                <div class="header-button-lang">
+                    <div class="drop-down">
+                        <input class="drop-down-toggle" type="text">
+                        <div class="drop-down-text">рус</div>
+                        <ul class="drop-down-content">
+                            <li><a href="#">eng</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="left-panel">
-        <div class="left-panel-right-menu">
+        <div class="left-panel-language">
             <div class="drop-down">
                 <input class="drop-down-toggle" type="text">
                 <div class="drop-down-text">рус</div>
@@ -74,26 +112,55 @@
                     <li><a href="#">eng</a></li>
                 </ul>
             </div>
-
+        </div>
+        <div class="left-panel-menu">
+            
+            <div class="positionize-left-memu">
+                <div class="col-xs-12">
+                    <a class="intro-menu-text green" href="#">О ФОНДЕ</a>
+                </div>
+                <div class="indent-menu"></div>
+                <div class="col-xs-12">
+                    <a class="intro-menu-text green" href="#">МЫ ПОМОГАЕМ</a>
+                </div>
+                <div class="indent-menu"></div>
+                <div class="col-xs-12">
+                    <a class="intro-menu-text green" href="#">НОВОСТИ</a>
+                </div>
+                <div class="indent-menu"></div>
+                <div class="col-xs-12">
+                    <a class="intro-menu-text green" href="#">ГАЛЕРЕЯ</a>
+                </div>
+                <div class="indent-menu"></div>
+                <div class="col-xs-12">
+                    <a class="intro-menu-text green" href="#">КОНТАКТЫ</a>
+                </div>
+                <div class="indent-menu"></div>
+                <div class="col-xs-12">
+                    <a class="intro-menu-text green" href="#">ПОДДЕРЖАТЬ</a>
+                </div>
+            </div>
+        </div>
+        <div class="left-panel-right-menu">
             <div class="spinner-master2">
                 <input type="checkbox" id="spinner-form2" />
-                <label for="spinner-form2" class="spinner-spin2 spinner animated fadeOut">
+                <label for="spinner-form2" class="spinner-spin2 spinner animated hide-gamburger">
                     <div class="spinner2 diagonal part-1"></div>
                     <div class="spinner2 horizontal"></div>
                     <div class="spinner2 diagonal part-2"></div>
                 </label>
             </div>
-
             <div class="logo-div">
-                <img src="~/Content/Images/logo.png" id="logo" />
+                <a href="/ru/Home/Index">
+                    <img src="~/Content/Images/logo.png" id="logo" />
+                </a>
             </div>
         </div>
-</div>
+    </div>
     <div class="left-tmp"></div>
     <div id="close-body" onclick="closeBodyClicked()"></div>
     <div class="site-body">
-        <div class="animated header">
-        </div>
+        
         
         @Scripts.Render("~/bundles/angularRu")
         @RenderBody()
@@ -102,10 +169,171 @@
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-lg-offset-1">adfasdfasdfasfasfasdfsa fsadfasdfasdfasdfsadfsa dfsadfsadfsdfsadfsadf</div>
-                <div class="col-lg-2 col-lg-offset-1">adfasdfasdfasfasfas dfsafsadfasdfasdfa sdfsadfsadfsadfsadfsdfsadfsadf</div>
-                <div class="col-lg-2 col-lg-offset-1">adfasdfasdfasfasfasd fsafsadfasdfasdfas dfsadfsadfsadfsadfsdfsadfsadf</div>
-                <div class="col-lg-2 col-lg-offset-1">adfasdfasdfasfasfasdf safsadfasdfasdfas dfsadfsadfsadfsadfsdfsadfsadf</div>
+                <div class="col-xs-2 col-xs-offset-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="intro-text green" href="#">О ФОНДЕ</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="semibold-text green" href="#">Партнеры</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="semibold-text green" href="#">Волонтеры</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="semibold-text green" href="#">Миссия</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-xs-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="intro-text green" href="#">МЫ ПОМОГАЕМ</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="semibold-text green" href="#">Детям сиротам</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="semibold-text green" href="#">Кризисным семьям</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="semibold-text green" href="#">Социальная адаптация</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="semibold-text green" href="#">Инвалидам</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="semibold-text green" href="#">Лагеря</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2 col-xs-offset-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="intro-text green" href="#">НОВОСТИ</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="intro-text green" href="#">ГАЛЕРЕЯ</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="intro-text green" href="#">КОНТАКТЫ</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a class="intro-text green" href="#">ПОДДЕРЖКА</a>
+                            </div>
+                            <div class="col-xs-12 indent">
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <div class="col-xs-2 col-xs-offset-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <span class="intro-text gray" href="#">КОНТАКТЫ</span>
+                                </div>
+                                <div class="col-xs-12 indent">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <span class="semibold-text gray">Горячая линия:</span><br />
+                                    <span class="semibold-text gray">044&nbsp;265&nbsp;45&nbsp;78</span>
+                                </div>
+                                <div class="col-xs-12 indent">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <span class="semibold-text gray">г.Киевб ул.Радунская, 75</span><br />
+                                    <span class="semibold-text gray">Центр Маяк</span>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 indent">
+                    <br />
+                </div>
+                <div class="col-xs-12 indent">
+                    <br />
+                </div>
+                <div class="col-xs-4 col-xs-offset-2">
+                    <span class="semibold-text gray">МБФ "Открытые двери"</span>
+                </div>
+                <div class="col-xs-offset-3 col-xs-2">
+                    <span class="semibold-text gray">Made by </span>
+                    <a class="intro-text green" href="#">UF</a>
+                </div>
             </div>
         </div>
     </div>

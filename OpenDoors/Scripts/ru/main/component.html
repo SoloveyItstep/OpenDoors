@@ -31,10 +31,10 @@
         </div>
 
         <div class="page-numbers">
-            <div class="page-number" (click)="SliderNumber(0)">01</div>
-            <div class="page-number" (click)="SliderNumber(1)">02</div>
-            <div class="page-number" (click)="SliderNumber(2)">03</div>
-            <div class="page-number" (click)="SliderNumber(3)">04</div>
+            <div class="page-number" [style.color]="Active(0)" (click)="SliderNumber(0)">01</div>
+            <div class="page-number" [style.color]="Active(1)" (click)="SliderNumber(1)">02</div>
+            <div class="page-number" [style.color]="Active(2)" (click)="SliderNumber(2)">03</div>
+            <div class="page-number" [style.color]="Active(3)" (click)="SliderNumber(3)">04</div>
         </div>
         <div class="positionize-square-right">
             <div class="right-arrow-block" (click)="SliderArrow('right')">

@@ -30,9 +30,13 @@ function hideLeftMenu() {
     var closeBody = document.getElementById("close-body");
 
     leftPanel.classList.contains("show-menu") ? leftPanel.classList.remove("show-menu") : "";
-    leftPanel.classList.add("hide-menu");
+    leftPanel.classList.add("hide-menu");    
     closeBody.classList.contains("close-body") ? closeBody.classList.remove("close-body") : "";
     closeBody.classList.add("open-body");
+
+    if (!scrollZeroKey) {
+        showMenu();
+    }
 }
 function closeBodyClicked() {
     var checked = document.getElementById("spinner-form2");
@@ -43,6 +47,8 @@ var scrollZeroKey = true;
 
 var runOnScroll = function (event) {
     var scrollPosition = 0.0;
+    var left = $(".left-panel").css("left");
+    
     if (event.path == undefined) {
         scrollPosition = window.pageYOffset;
     }
@@ -56,6 +62,10 @@ var runOnScroll = function (event) {
     else if(scrollPosition === 0 && !scrollZeroKey){
         showMenu();
     }
+
+    if (left === "0px" && scrollPosition === 0) {
+        hideMenu();
+    }
     
 };
 
@@ -66,9 +76,9 @@ function showMenu() {
 
     if (header.classList.contains("fadeOutUp")) {
         header.classList.remove("fadeOutUp");
-        gamburger.classList.remove("fadeIn");
+        gamburger.classList.remove("show-gamburger");
     }
-    gamburger.classList.add("fadeOut");
+    gamburger.classList.add("hide-gamburger");
     header.classList.add("fadeInDown");
 }
 
@@ -80,8 +90,9 @@ function hideMenu() {
     if (topFooter.classList.contains("fadeInDown")) {
         topFooter.classList.remove("fadeInDown");        
     }
-    gamburger.classList.remove("fadeOut");
+    gamburger.classList.remove("hide-gamburger");
+    //gamburger.classList.add("hide-gamburger");
     topFooter.classList.add("fadeOutUp");
-    gamburger.classList.add("fadeIn");
+    gamburger.classList.add("show-gamburger");
 
 }

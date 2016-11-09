@@ -64,10 +64,16 @@ export class AppComponent {
                 this.ShowText(-1);
             else
                 this.ShowText(previous);
-            //this.linkClass = false;
             this.carouselLink = "/ru"+this.Carousel[this.count].Url;
             start = false;
+
         }, 12000);
+    }
+
+    public Active(index: number): string {
+        if (index === this.count)
+            return "yellow";
+        return "white";
     }
 
     public ShowText(previous: number) {

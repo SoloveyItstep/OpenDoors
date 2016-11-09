@@ -48,10 +48,14 @@ var AppComponent = (function () {
                 _this.ShowText(-1);
             else
                 _this.ShowText(previous);
-            //this.linkClass = false;
             _this.carouselLink = "/ru" + _this.Carousel[_this.count].Url;
             start = false;
         }, 12000);
+    };
+    AppComponent.prototype.Active = function (index) {
+        if (index === this.count)
+            return "yellow";
+        return "white";
     };
     AppComponent.prototype.ShowText = function (previous) {
         var _this = this;
