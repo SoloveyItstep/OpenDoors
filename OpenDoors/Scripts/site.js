@@ -6,8 +6,86 @@
         hideMenu();
     }
     document.querySelector("#spinner-form2").addEventListener("change", gamburgerMenu);
+    //document.querySelector(".left-menu-drpdown").addEventListener("mouseover", showDropDown);
+    //document.querySelector(".left-menu-drpdown").addEventListener("mouseleave", hideDropDown);
 });
 
+var bodyClickEventLestener;
+
+function ShowDropDown() {
+    var element = $(".drop-down-content-left").first();
+    var opacity = element.css("opacity");
+    var content = document.getElementsByClassName("drop-down-content-left")[0];
+    var dropdownHeight = $("#indent-menu-for-dropdown");
+    var arrow = document.getElementById("dropdown-arrow-left");
+
+    if (opacity == 0) {
+        content.classList.remove("dropup-height");
+        content.classList.add("dropdown-height");
+        dropdownHeight.height(220);
+        arrow.classList.add("rotate-arrow");
+
+        if (bodyClickEventLestener === undefined) {
+            bodyClickEventLestener = $("body").click(Event);
+            //console.log('event - 3');
+        }
+        else {
+            bodyClickEventLestener.on("click",Event);
+            //console.log('event - 4');
+        }
+    }
+    else {
+        content.classList.remove("dropdown-height");
+        content.classList.add("dropup-height");
+        dropdownHeight.height(50);
+        arrow.classList.remove("rotate-arrow");
+        // console.log("event - 5");
+    }
+    
+}
+
+function Event(event){
+    var className = event.target.classList[0];
+    var opacity = $(".drop-down-content-left").first().css("opacity");
+    
+    //console.log(opacity);
+    //console.log(className);
+    //console.log(event.target.classList[0] === "drop-down-text-left");
+    if (className !== "drop-down-text-left" && opacity == 1) {
+        
+        bodyClickEventLestener.off();
+        
+        ShowDropDown();
+        //console.log('event - 1');
+    }
+    else if (className !== "drop-down-text-left" && opacity < 1) {
+        //console.log('event - 2');
+        bodyClickEventLestener.off();
+        
+    }
+}
+//function showDropDown(){
+//    var element = document.getElementsByClassName("drpdown-left-menu")[0];
+//    if (!element.classList.contains("dropdown-animation")) {
+//        element.classList.remove("dropup-animation");
+//        element.classList.add("dropdown-animation");
+//        var links = document.getElementsByClassName("drpdown-link-left");
+//        for (var i = 0; i < links.length; ++i) {
+//            links[i].classList.add("show-dropdown-menu-text");
+//        }
+//    }
+//}
+//function hideDropDown() {
+//    var element = document.getElementsByClassName("drpdown-left-menu")[0];
+//    if (!element.classList.contains("dropup-animation")) {
+//        element.classList.remove("dropdown-animation");
+//        element.classList.add("dropup-animation");
+//        var links = document.getElementsByClassName("drpdown-link-left");
+//        for (var i = 0; i < links.length; ++i) {
+//            links[i].classList.remove("show-dropdown-menu-text");
+//        }
+//    }
+//}
 function gamburgerMenu(event){
     var checked = event.path[0].checked;
 
@@ -33,7 +111,14 @@ function hideLeftMenu() {
     leftPanel.classList.add("hide-menu");    
     closeBody.classList.contains("close-body") ? closeBody.classList.remove("close-body") : "";
     closeBody.classList.add("open-body");
-
+    
+    var scrollTop1 = document.documentElement.scrollTop;
+    var scrollTop2 = document.body.scrollTop;
+    if (scrollTop1 > 0 || scrollTop2 > 0)
+        scrollZeroKey = true;
+    else
+        scrollZeroKey = false;
+    
     if (!scrollZeroKey) {
         showMenu();
     }
@@ -95,4 +180,26 @@ function hideMenu() {
     topFooter.classList.add("fadeOutUp");
     gamburger.classList.add("show-gamburger");
 
+}
+
+function DropDownMenu() {
+    //var btn = document.getElementsByClassName("drpdown-menu")[0];
+    var menu = document.getElementsByClassName("drpdown-menu")[0];
+    var links = document.getElementsByClassName("drpdown-link");
+    var count = links.length;
+
+    if (menu.classList.contains("dropdown-animation")) {
+        menu.classList.remove("dropdown-animation");
+        menu.classList.add("dropup-animation");
+        for (var i = 0; i < count; ++i) {
+            links[i].classList.add("hide-links");
+        }
+    }
+    else {
+        for (var i = 0; i < count; ++i) {
+            links[i].classList.remove("hide-links");
+        }
+        menu.classList.add("dropdown-animation");
+        menu.classList.remove("dropup-animation");
+    }
 }

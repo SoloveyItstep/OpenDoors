@@ -51,7 +51,7 @@
                                 prog.addClass("hidden");
                                 //prog.css({ 'display': 'none' });
                             }, 500);
-                        }, 750);
+                        }, 1500);
                     }
                     else {
                        
@@ -72,9 +72,43 @@
                     <a class="header-button" id="about-link" href="#">О ФОНДЕ</a>
                     <div class="header-button-line" id="about-line"></div>
                 </div>
-                <div class="header-button-div">
-                    <a class="header-button" href="#">МЫ ПОМОГАЕМ</a>
-                    <div class="header-button-line"></div>
+                
+                    <div class="drpdown">
+                    <a href="#" class="header-button dropdown-button" >МЫ ПОМОГАЕМ</a>
+                    <span id="dropdown-arrow"></span>
+                        <div class="drpdown-menu row">
+                            <div class="col-xs-12 indent-dropdown"></div>
+                            <div class="col-xs-12 indent-dropdown"></div>
+                            <div class="col-xs-10 col-xs-offset-2">
+                                <span class="drpdown-link">
+                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Детям сиротам</a>
+                                </span>
+                            </div>
+                            <div class="col-xs-12 indent-dropdown"></div>
+                            <div class="col-xs-12">
+                                <span class="drpdown-link">
+                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Кризисным семьям</a>
+                                </span>
+                            </div>
+                            <div class="col-xs-12 indent-dropdown"></div>
+                            <div class="col-xs-12">
+                                <span class="drpdown-link">
+                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Социальная адаптация</a>
+                                </span>
+                            </div>
+                            <div class="col-xs-12 indent-dropdown"></div>
+                            <div class="col-xs-12">
+                                <span class="drpdown-link">
+                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Инвалидам</a>
+                                </span>
+                            </div>
+                            <div class="col-xs-12 indent-dropdown"></div>
+                            <div class="col-xs-12">
+                                <span class="drpdown-link">
+                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Лагеря</a>
+                                </span>
+                            </div>
+                        </div>
                 </div>
                 <div class="header-button-div">
                     <a class="header-button" href="#">НОВОСТИ</a>
@@ -95,7 +129,7 @@
                     <div class="drop-down">
                         <input class="drop-down-toggle" type="text">
                         <div class="drop-down-text">рус</div>
-                        <ul class="drop-down-content">
+                        <ul class="drop-down-content header-lang">
                             <li><a href="#">eng</a></li>
                         </ul>
                     </div>
@@ -120,10 +154,22 @@
                     <a class="intro-menu-text green" href="#">О ФОНДЕ</a>
                 </div>
                 <div class="indent-menu"></div>
-                <div class="col-xs-12">
-                    <a class="intro-menu-text green" href="#">МЫ ПОМОГАЕМ</a>
+                <div class="col-xs-12 column">
+                    <div class="drop-down-left">
+                        <input class="drop-down-toggle-left" onclick="ShowDropDown()" type="text">
+                        <div class="drop-down-text-left" onclick="ShowDropDown()">МЫ ПОМОГАЕМ</div>
+                        <span id="dropdown-arrow-left"></span>
+                        <ul class="drop-down-content-left dropup-height">
+                            <li><a class="left-panel-link" href="#">Детям сиротам</a></li>
+                            <li><a class="left-panel-link" href="#">Кризисным семьям</a></li>
+                            <li><a class="left-panel-link" href="#">Социальная адаптация</a></li>
+                            <li><a class="left-panel-link" href="#">Инвалидам</a></li>
+                            <li><a class="left-panel-link" href="#">Лагеря</a></li>
+                        </ul>
+                    </div>
+                    
                 </div>
-                <div class="indent-menu"></div>
+                <div class="indent-menu-for-dropdown" id="indent-menu-for-dropdown"></div>
                 <div class="col-xs-12">
                     <a class="intro-menu-text green" href="#">НОВОСТИ</a>
                 </div>
@@ -312,7 +358,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <span class="semibold-text gray">г.Киевб ул.Радунская, 75</span><br />
+                                    <span class="semibold-text gray">г.Киев, ул.Радунская, 75</span><br />
                                     <span class="semibold-text gray">Центр Маяк</span>
                                 </div>                                
                             </div>
