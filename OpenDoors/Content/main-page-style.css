@@ -264,6 +264,22 @@ a:link, a:hover, a:active{
     max-height: 50%;
     min-height: 300px !important;
 }
+.social{
+    position:relative;
+    top: 45%;
+    height: 100%;
+    left: 5px;
+}
+.social-img{
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    background-size: 30px 30px;
+}
+#instagram-logo{
+    margin-left: -2px;
+}
 #logo{
     display: block;
     margin-left: auto;
@@ -782,7 +798,6 @@ a:link, a:hover, a:active{
         margin-left: -250px;
     }
 }
-
 .indent-menu-for-dropdown{
     height: 50px;    
     transition: all 1s ease;

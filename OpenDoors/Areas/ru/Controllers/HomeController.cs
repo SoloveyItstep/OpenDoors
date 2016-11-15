@@ -19,6 +19,7 @@ namespace OpenDoors.Areas.ru.Controllers
         // GET: ru/Home
         public ActionResult Index()
         {
+            ViewBag.lang = @"/en/Home/Index";
             return View();
         }
 

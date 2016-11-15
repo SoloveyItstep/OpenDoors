@@ -1,5 +1,4 @@
-﻿using OpenDoors.EntityDb;
-using OpenDoors.EntityDb.Data;
+﻿using OpenDoors.EntityDb.Data;
 using OpenDoors.EntityDb.UnitOfWork;
 using System;
 using System.Collections.Generic;

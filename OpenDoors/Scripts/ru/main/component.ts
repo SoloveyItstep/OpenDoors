@@ -1,4 +1,4 @@
-﻿import { Component, Input, ViewEncapsulation, OnInit } from "@angular/core";
+﻿import { Component, Input, ViewEncapsulation, OnInit, OpaqueToken } from "@angular/core";
 import { CarouselList } from "./CarouselList";
 import { ICarousel } from "./ICarousel";
 import { Http } from "@angular/http";
@@ -6,7 +6,6 @@ import { UrlResolver } from "@angular/compiler";
 import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
 declare const module: any;
-
 
 @Component({
     selector: "app-carousel",
@@ -24,7 +23,7 @@ export class AppComponent {
     private nameTimeout: any;
     private moreButtonTimeout: any;
     carouselLink = "#";
-
+    
     imageClasses = [true, false, false, false];
     textClasses = [{ title: false, text: false, name: false }, { title: false, text: false, name: false },
         { title: false, text: false, name: false }, { title: false, text: false, name: false }];
@@ -37,9 +36,9 @@ export class AppComponent {
             (data) => {                
                 this.Carousel = data.json();
                 setTimeout(this.Slide(true), 2000);
-                
             }
         );
+        
     }
 
     public Path(path: string): SafeResourceUrl {
@@ -47,7 +46,7 @@ export class AppComponent {
         return resolver.resolve(module.id, "/../../"+path);
     }
 
-    public Slide(start: boolean) {  
+    public Slide(start: boolean) {
         this.ShowText(-1);
         this.StartInterval(start);
     }

@@ -87,32 +87,32 @@ namespace OpenDoors.Tests.Controllers
         {
             IUnitOfWork unitOfWork = new UnitOfWork(new ContextDb(@"Data Source=DESKTOP-0QC9GCN\SQLEXPRESS;Initial Catalog=OpenDoorsFund;Integrated Security=True"));
 
-            Language en = new Language() { Code = "en", LanguageName = "English" };
-            Language ru = new Language() { Code = "ru", LanguageName = "Russian" };
-            unitOfWork.Language.Add(en);
-            unitOfWork.Language.Add(ru);
-            unitOfWork.Compile();
+            //Language en = new Language() { Code = "en", LanguageName = "English" };
+            //Language ru = new Language() { Code = "ru", LanguageName = "Russian" };
+            //unitOfWork.Language.Add(en);
+            //unitOfWork.Language.Add(ru);
+            //unitOfWork.Compile();
 
-            List<Photo> photo = new List<Photo>() {
-                new Photo {
-                    Path = @"\Content\Images\Carousel\banner1.jpg"
-                },
-                new Photo {
-                    Path = @"\Content\Images\Carousel\banner2.jpg"
-                },
-                new Photo {
-                    Path = @"\Content\Images\Carousel\banner3.jpg"
-                },
-                new Photo {
-                    Path = @"\Content\Images\Carousel\banner4.jpg"
-                },
-            };
-            unitOfWork.Photo.AddRange(photo);
-            unitOfWork.Compile();
+            //List<Photo> photo = new List<Photo>() {
+            //    new Photo {
+            //        Path = @"\Content\Images\Carousel\banner1.jpg"
+            //    },
+            //    new Photo {
+            //        Path = @"\Content\Images\Carousel\banner2.jpg"
+            //    },
+            //    new Photo {
+            //        Path = @"\Content\Images\Carousel\banner3.jpg"
+            //    },
+            //    new Photo {
+            //        Path = @"\Content\Images\Carousel\banner4.jpg"
+            //    },
+            //};
+            //unitOfWork.Photo.AddRange(photo);
+            //unitOfWork.Compile();
 
             IEnumerable<Slider> sl = unitOfWork.Slider.GetAll();
 
-            Language lang = unitOfWork.Language.Find(l => l.Code == "ru")
+            Language lang = unitOfWork.Language.Find(l => l.Code == "en")
                 .FirstOrDefault();
             
             List<Photo> ph = unitOfWork.Photo.GetAll().ToList();
@@ -123,9 +123,9 @@ namespace OpenDoors.Tests.Controllers
                 unitOfWork.Slider.Add(
                         new Slider()
                         {
-                            Title = "У меня есть новая семья, которая любит и помагает в пути...",
-                            Description = "Разнообразный и богатый опыт рамки и место обучения кадров обеспечивает широкому кругу участие в формировании",
-                            FullName = "Наташа Иванова",
+                            Title = "I have a new family that loves and helps along the way ...",
+                            Description = "Varied and rich experience in the scope and location of training staff provides wide range of participation in formation",
+                            FullName = "Natasha Ivanova",
                             Language = lang,
                             Photo = ph[i],
                             Url = "/Home/Index",
