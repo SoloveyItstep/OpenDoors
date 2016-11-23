@@ -140,7 +140,7 @@ var AppComponent = (function () {
             selector: "app-carousel",
             moduleId: module.id,
             templateUrl: "./component.html",
-            styleUrls: ['./component.css'],
+            styleUrls: ['./component.min.css'],
             animations: []
         }), 
         __metadata('design:paramtypes', [http_1.Http])

@@ -9,18 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-//import { Headers, RequestOptions } from '@angular/http';
 var http_1 = require("@angular/http");
-//import { Observable }     from 'rxjs/Observable';
 var CarouselList = (function () {
     function CarouselList(http) {
-        //this.http.get("ru/home/getsliderjson", null)
-        //    //.map(res => res.json)
-        //    .subscribe(
-        //    //(data) => this.carousel = data
         this.http = http;
-        //);
-        //.json()
         this.key = false;
     }
     CarouselList.prototype.getData = function () {
@@ -29,7 +21,6 @@ var CarouselList = (function () {
             .subscribe(function (data) {
             return _this.datapush(data.json());
         }, function (err) { return console.error(err); }, function () { return console.log("ok"); });
-        //console.log(this.carousel);
     };
     CarouselList.prototype.datapush = function (data) {
         console.log(data);

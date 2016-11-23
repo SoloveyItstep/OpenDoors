@@ -260,6 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animate.css" />
+    <Content Include="Content\animate.min.css">
+      <DependentUpon>animate.css</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -286,8 +289,17 @@
     <Content Include="Content\Images\Carousel\banner4.jpg" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\Main\main_small.jpg" />
+    <Content Include="Content\main-page-style.min.css">
+      <DependentUpon>main-page-style.css</DependentUpon>
+    </Content>
     <Content Include="Content\main\AppComponent.css" />
+    <Content Include="Content\main\AppComponent.min.css">
+      <DependentUpon>AppComponent.css</DependentUpon>
+    </Content>
     <Content Include="Content\preloader.css" />
+    <Content Include="Content\preloader.min.css">
+      <DependentUpon>preloader.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -362,7 +374,11 @@
     <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.ttf" />
     <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff" />
     <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff2" />
+    <None Include="bundleconfig.json" />
     <None Include="Properties\PublishProfiles\open doors.pubxml" />
+    <Content Include="Scripts\en\main\component.min.css">
+      <DependentUpon>component.css</DependentUpon>
+    </Content>
     <Content Include="Scripts\en\main\Fonts\Intro\Intro.eot" />
     <Content Include="Scripts\en\main\Fonts\Intro\Intro.ttf" />
     <Content Include="Scripts\en\main\Fonts\Intro\Intro.woff" />
@@ -399,8 +415,17 @@
     <Content Include="Scripts\en\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.svg" />
     <Content Include="Scripts\en\main\Fonts\OpenSans-Semibold\stylesheet.css" />
     <Content Include="Scripts\en\main\preloader.js" />
+    <Content Include="Scripts\en\main\preloader.min.js">
+      <DependentUpon>preloader.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\en\main\system.config.js" />
+    <Content Include="Scripts\en\main\system.config.min.js">
+      <DependentUpon>system.config.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\en\main\volunteer-images.css" />
+    <Content Include="Scripts\en\main\volunteer-images.min.css">
+      <DependentUpon>volunteer-images.css</DependentUpon>
+    </Content>
     <Content Include="Scripts\en\main\volunteer.html" />
     <Content Include="Scripts\en\system.config.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -412,10 +437,19 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\preloader.js" />
+    <Content Include="Scripts\preloader.min.js">
+      <DependentUpon>preloader.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\ru\main\component.css" />
     <Content Include="Scripts\ru\main\component.html" />
+    <Content Include="Scripts\ru\main\component.min.css">
+      <DependentUpon>component.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\main\component.min.html">
+      <DependentUpon>component.html</DependentUpon>
+    </Content>
     <Content Include="Scripts\ru\main\Fonts\Intro\demo.html" />
     <Content Include="Scripts\ru\main\Fonts\Intro\Intro.svg" />
     <Content Include="Scripts\ru\main\Fonts\Intro\stylesheet.css" />
@@ -429,10 +463,22 @@
     <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.svg" />
     <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\stylesheet.css" />
     <Content Include="Scripts\ru\main\preloader.js" />
+    <Content Include="Scripts\ru\main\preloader.min.js">
+      <DependentUpon>preloader.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\ru\main\system.config.js" />
     <Content Include="Scripts\ru\main\volunteer-images.css" />
+    <Content Include="Scripts\ru\main\volunteer-images.min.css">
+      <DependentUpon>volunteer-images.css</DependentUpon>
+    </Content>
     <Content Include="Scripts\ru\main\volunteer.html" />
+    <Content Include="Scripts\ru\main\volunteer.min.html">
+      <DependentUpon>volunteer.html</DependentUpon>
+    </Content>
     <Content Include="Scripts\site.js" />
+    <Content Include="Scripts\site.min.js">
+      <DependentUpon>site.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\_references.js" />
     <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />

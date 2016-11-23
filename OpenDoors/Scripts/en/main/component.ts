@@ -11,7 +11,7 @@ declare const module: any;
     selector: "app-carousel",
     moduleId: module.id,
     templateUrl: "./component.html",
-    styleUrls: ['./component.css'],
+    styleUrls: ['./component.min.css'],
     animations: []
 })
 export class AppComponent {

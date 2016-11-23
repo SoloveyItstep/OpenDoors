@@ -9,7 +9,7 @@ namespace OpenDoors
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -24,8 +24,8 @@ namespace OpenDoors
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/animate.css",
-                      "~/Content/bootstrap.css"));
+                      "~/Content/animate.min.css",
+                      "~/Content/bootstrap.min.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularEn").Include(
                     "~/node_modules/core-js/client/shim.min.js",
@@ -41,6 +41,13 @@ namespace OpenDoors
                     "~/node_modules/reflect-metadata/Reflect.js",
                     "~/node_modules/systemjs/dist/system.src.js",
                     "~/Scripts/ru/systemjs.config.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                    "~/node_modules/core-js/client/shim.min.js",
+                    "~/node_modules/zone.js/dist/zone.js",
+                    "~/node_modules/reflect-metadata/Reflect.js",
+                    "~/node_modules/systemjs/dist/system.src.js"
                 ));
         }
     }

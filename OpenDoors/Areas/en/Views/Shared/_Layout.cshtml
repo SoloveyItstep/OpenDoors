@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    <link type="text/css" href="~/Content/preloader.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/preloader.min.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     @RenderSection("styles",false)
     <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
@@ -19,7 +19,6 @@
         <input type="hidden" id="progress_width" value="0">
     </div>
     <script type="text/javascript" >
-        //src="~/Scripts/preloader.js"
         document.onreadystatechange = function (e) {
             if (document.readyState == "interactive") {
                 var all = document.getElementsByTagName("*");
@@ -40,18 +39,13 @@
                 }
                 document.getElementById("progress_width").value = prog_width;
                 $("#bar1").animate({ width: prog_width + "%" }, 10, function () {
-                    //var persentages = Math.round(parseInt(document.getElementById("bar1").style.width));
                     if (Math.round(prog_width) == "100") {
-                        //console.log("100%");
                         LoadComplete();
                     }
                     else {
-                       
-                        //console.log(Math.round(prog_width));
                     }
                 });
             }
-
             else {
                 set_ele(ele);
             }
@@ -209,7 +203,7 @@
             <div class="col-xs-12 social">
                 <div class="col-xs-12">
                     <a href="#" class="social-img">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              width="25px" height="25px" viewBox="0 0 96.227 96.227" style="enable-background:new 0 0 30 30; fill:#6e644d;"
                              xml:space="preserve">
                         <g>
@@ -221,7 +215,7 @@
                 </div>
                 <div class="col-xs-12">
                     <a href="#" class="social-img" id="instagram-logo">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              width="30px" height="30px" viewBox="0 0 239.04 239.04" style="enable-background:new 0 0 239.04 239.04; fill:#6e644d;" xml:space="preserve">
                             <g>
                                 <path style="fill:#FFFFFF;" d="M167.809,36.555c-22.276-0.183-44.597-1.054-66.919-0.504c-25.851,0.642-46.018,2.2-61.281,22.872
@@ -243,7 +237,7 @@
                 </div>
                 <div class="col-xs-12">
                     <a href="#" class="social-img">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             width="25px" height="25px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310; fill:#6e644d;" xml:space="preserve">
                             <g id="XMLID_822_">
                             <path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
@@ -258,7 +252,7 @@
                 </div>
                 <div class="col-xs-12">
                     <a class="social-img" href="#">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              width="25px" height="25px" viewBox="0 0 532.337 532.337" style="enable-background:new 0 0 532.337 532.337; fill:#6e644d;"
                              xml:space="preserve">
                         <g>
@@ -307,7 +301,8 @@
     <div class="site-body">
         
         
-        @Scripts.Render("~/bundles/angularRu")
+        @Scripts.Render("~/bundles/angular")
+        @RenderSection("angularConfig", false)
         @RenderBody()
         
     </div>
@@ -440,7 +435,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <span class="intro-text gray" href="#">КОНТАКТЫ</span>
+                                    <span class="intro-text gray">КОНТАКТЫ</span>
                                 </div>
                                 <div class="col-xs-12 indent">
                                     <br />
@@ -487,4 +482,4 @@
 </html>
 @Scripts.Render("~/bundles/modernizr")
 @RenderSection("scripts",false)
-<script type="text/javascript" src="~/Scripts/site.js"></script>
+<script type="text/javascript" src="~/Scripts/site.min.js"></script>

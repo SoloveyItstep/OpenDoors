@@ -15,7 +15,12 @@ var Volunteer = (function () {
         this.ngAfterViewInit();
     }
     Volunteer.prototype.ngAfterViewInit = function () {
-        var position = document.body.scrollTop;
+        var position = 0;
+        if (document.body.scrollTop === 0 && document.documentElement.scrollTop != undefined &&
+            document.documentElement.scrollTop > 0)
+            position = document.documentElement.scrollTop;
+        else
+            position = document.body.scrollTop;
         if (position > 0)
             this.showBlock = true;
         else
@@ -23,7 +28,10 @@ var Volunteer = (function () {
     };
     Volunteer.prototype.OnScrollEvent = function (event) {
         var position = document.body.scrollTop;
+        var position2 = document.documentElement.scrollTop;
         if (position > 0)
+            this.showBlock = true;
+        else if (position === 0 && position2 != undefined && position2 > 0)
             this.showBlock = true;
         else
             this.showBlock = false;

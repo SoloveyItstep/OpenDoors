@@ -1,0 +1,92 @@
+[
+  {
+    "outputFileName": "Content/animate.min.css",
+    "inputFiles": [
+      "Content/animate.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/main-page-style.min.css",
+    "inputFiles": [
+      "Content/main-page-style.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/preloader.min.css",
+    "inputFiles": [
+      "Content/preloader.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/site.min.js",
+    "inputFiles": [
+      "Scripts/site.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/preloader.min.js",
+    "inputFiles": [
+      "Scripts/preloader.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ru/main/component.min.css",
+    "inputFiles": [
+      "Scripts/ru/main/component.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ru/main/component.min.html",
+    "inputFiles": [
+      "Scripts/ru/main/component.html"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ru/main/preloader.min.js",
+    "inputFiles": [
+      "Scripts/ru/main/preloader.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ru/main/volunteer-images.min.css",
+    "inputFiles": [
+      "Scripts/ru/main/volunteer-images.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ru/main/volunteer.min.html",
+    "inputFiles": [
+      "Scripts/ru/main/volunteer.html"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/en/main/volunteer-images.min.css",
+    "inputFiles": [
+      "Scripts/en/main/volunteer-images.css"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/en/main/preloader.min.js",
+    "inputFiles": [
+      "Scripts/en/main/preloader.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/en/main/system.config.min.js",
+    "inputFiles": [
+      "Scripts/en/main/system.config.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/en/main/component.min.css",
+    "inputFiles": [
+      "Scripts/en/main/component.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/main/AppComponent.min.css",
+    "inputFiles": [
+      "Content/main/AppComponent.css"
+    ]
+  }
+]
