@@ -19,10 +19,6 @@ namespace OpenDoors
                 defaults: new { language = "ru", controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "OpenDoors.Areas.ru.Controllers" }
             ).DataTokens.Add("area","ru");
-
-            //routes.MapRoute
-
-            //namespaces: new[] { "OpenDoors.Arias.en" }
         }
     }
 }

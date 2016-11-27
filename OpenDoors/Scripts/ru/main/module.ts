@@ -5,7 +5,7 @@ import { HttpModule } from "@angular/http";
 import { CarouselList } from "./CarouselList";
 import { UrlResolver } from "@angular/compiler";
 import { Volunteer } from "./volunteer-images";
-
+///<reference path="File.js"/>
 //import './rxjs-operators';
 
 @NgModule({

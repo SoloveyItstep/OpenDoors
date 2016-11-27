@@ -236,7 +236,6 @@
     <Compile Include="Areas\ru\ruAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\HomeRuApiController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -287,6 +286,7 @@
     <Content Include="Content\Images\Carousel\banner2.jpg" />
     <Content Include="Content\Images\Carousel\banner3.jpg" />
     <Content Include="Content\Images\Carousel\banner4.jpg" />
+    <Content Include="Content\Images\happy_kids.gif" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\Main\main_small.jpg" />
     <Content Include="Content\main-page-style.min.css">
@@ -450,6 +450,7 @@
     <Content Include="Scripts\ru\main\component.min.html">
       <DependentUpon>component.html</DependentUpon>
     </Content>
+    <Content Include="Scripts\ru\main\File.js" />
     <Content Include="Scripts\ru\main\Fonts\Intro\demo.html" />
     <Content Include="Scripts\ru\main\Fonts\Intro\Intro.svg" />
     <Content Include="Scripts\ru\main\Fonts\Intro\stylesheet.css" />

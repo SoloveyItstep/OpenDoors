@@ -4,64 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    <link type="text/css" href="~/Content/preloader.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
-    @RenderSection("styles",false)
-    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
 </head>
-<body>
-
-    <div class="preloader animate" id="prog">
+<body class="hide-scroll">
+    @*animate*@
+    <div class="preloader " id="prog">
         <div class='progress-preload' id="progress_div">
             <div class='bar' id='bar1'></div>
             <div class='percent' id='percent1'></div>
         </div>
         <input type="hidden" id="progress_width" value="0">
+        <div class="row">
+            <div class="col-xs-12" id="preloader-image-div">
+                <img src="@Url.Content("~/Content/Images/happy_kids.gif")" id="preloader-image"/>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript" >
-        document.onreadystatechange = function (e) {
-            if (document.readyState == "interactive") {
-                var all = document.getElementsByTagName("*");
-                for (var i = 0, max = all.length; i < max; i++) {
-                    check_element(all[i]);
-                }
-            }
-        }
-        var loadComplete = false;
-        function check_element(ele) {
-            var all = document.getElementsByTagName("*");
-            var percantage = 100 / all.length;
-            if ($(ele).on()) {
-                var prog_width = percantage + Number(document.getElementById("progress_width").value);
-                if (prog_width > 100.1) {
-                    prog_width -= 100;
-                }
-                document.getElementById("progress_width").value = prog_width;
-                $("#bar1").animate({ width: prog_width + "%" }, 10, function () {
-                    if (Math.round(prog_width) == "100") {
-                        LoadComplete();
-                    }
-                    else {
-                    }
-                });
-            }
-
-            else {
-                set_ele(ele);
-            }
-        }
-        function LoadComplete() {
-                $(".progress-preload").fadeOut("slow");
-                var prog = $("#prog");
-
-                setTimeout(function () {
-                    prog.addClass("preloadFadeOut");
-                    setTimeout(function () {
-                        prog.addClass("hidden");
-                    }, 500);
-                }, 2000);
-        }
-    </script>
+    
     <div class="animated header">
         <div class="container header-buttons-container">
             <div class="row">
@@ -194,8 +153,8 @@
                 </label>
             </div>
             <div class="logo-div">
-                <a href="/ru/Home/Index">
-                    <img src="~/Content/Images/logo.png" id="logo" />
+                <a href="@Url.Content("/ru/Home/Index")">
+                    <img src="@Url.Content("~/Content/Images/logo.png")" id="logo" />
                 </a>
             </div>
             <div class="col-xs-12 social">
@@ -301,6 +260,7 @@
         @RenderSection("angularConfig", false)
         @RenderBody()     
     </div>
+    
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -472,9 +432,61 @@
             </div>
         </div>
     </div>
+
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("scripts", false)
+    
+    @RenderSection("styles", false)
+    <script type="text/javascript">
+        document.onreadystatechange = function (e) {
+            if (document.readyState == "interactive") {
+                var all = document.getElementsByTagName("*");
+                for (var i = 0, max = all.length; i < max; i++) {
+                    check_element(all[i]);
+                }
+            }
+        }
+        var loadComplete = false;
+        function check_element(ele) {
+            var all = document.getElementsByTagName("*");
+            var percantage = 100 / all.length;
+            if ($(ele).on()) {
+                var prog_width = percantage + Number(document.getElementById("progress_width").value);
+                if (prog_width > 100.1) {
+                    prog_width -= 100;
+                }
+                document.getElementById("progress_width").value = prog_width;
+                $("#bar1").animate({ width: prog_width + "%" }, 10, function () {
+                    if (Math.round(prog_width) == "100") {
+                        LoadComplete();
+                    }
+                    else {
+                    }
+                });
+            }
+
+            else {
+                set_ele(ele);
+            }
+        }
+        function LoadComplete() {
+                //$(".progress-preload").fadeOut("slow");
+                var prog = document.getElementById("prog");
+
+                setTimeout(function () {
+                    prog.classList.add("preloadFadeOut");
+                    document.getElementsByTagName("body")[0].classList.remove("hide-scroll");
+                    setTimeout(function () {
+                        prog.classList.add("hidden");
+                    }, 1400);
+                }, 3000);
+        }
+    </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/site.min.js")"></script>
 </body>
 
 </html>
-@Scripts.Render("~/bundles/modernizr")
-@RenderSection("scripts",false)
-<script type="text/javascript" src="~/Scripts/site.min.js"></script>
+
+
+@*<script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>*@

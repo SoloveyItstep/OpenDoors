@@ -14,6 +14,7 @@ var component_1 = require("./component");
 var http_1 = require("@angular/http");
 var CarouselList_1 = require("./CarouselList");
 var volunteer_images_1 = require("./volunteer-images");
+///<reference path="File.js"/>
 //import './rxjs-operators';
 var AppModule = (function () {
     function AppModule() {

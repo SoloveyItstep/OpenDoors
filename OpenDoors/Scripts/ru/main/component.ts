@@ -1,9 +1,10 @@
-﻿import { Component, Input, ViewEncapsulation, OnInit, OpaqueToken } from "@angular/core";
+﻿import { Component, Input, ViewEncapsulation, OpaqueToken } from "@angular/core";
 import { CarouselList } from "./CarouselList";
 import { ICarousel } from "./ICarousel";
 import { Http } from "@angular/http";
 import { UrlResolver } from "@angular/compiler";
 import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
+
 
 declare const module: any;
 

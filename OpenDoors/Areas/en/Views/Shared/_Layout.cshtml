@@ -4,66 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    <link type="text/css" href="~/Content/preloader.min.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
-    @RenderSection("styles",false)
-    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+    @*@RenderSection("styles",false)
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>*@
 </head>
-<body>
-
+<body class="hide-scroll">
     <div class="preloader animate" id="prog">
         <div class='progress-preload' id="progress_div">
             <div class='bar' id='bar1'></div>
             <div class='percent' id='percent1'></div>
         </div>
         <input type="hidden" id="progress_width" value="0">
+        <div class="row">
+            <div class="col-xs-12" id="preloader-image-div">
+                <img src="~/Content/Images/happy_kids.gif" id="preloader-image" />
+            </div>
+        </div>
     </div>
-    <script type="text/javascript" >
-        document.onreadystatechange = function (e) {
-            if (document.readyState == "interactive") {
-                var all = document.getElementsByTagName("*");
-                for (var i = 0, max = all.length; i < max; i++) {
-                    check_element(all[i]);
-                }
-            }
-        }
-        var loadComplete = false;
-        function check_element(ele) {
-            var all = document.getElementsByTagName("*");
-            var percantage = 100 / all.length;
-
-            if ($(ele).on()) {
-                var prog_width = percantage + Number(document.getElementById("progress_width").value);
-                if (prog_width > 100.1) {
-                    prog_width -= 100;
-                }
-                document.getElementById("progress_width").value = prog_width;
-                $("#bar1").animate({ width: prog_width + "%" }, 10, function () {
-                    if (Math.round(prog_width) == "100") {
-                        LoadComplete();
-                    }
-                    else {
-                    }
-                });
-            }
-            else {
-                set_ele(ele);
-            }
-        }
-        function LoadComplete() {
-                $(".progress-preload").fadeOut("slow");
-                var prog = $("#prog");
-
-                setTimeout(function () {
-                    //prog.css({ 'display': 'none' });
-                    prog.addClass("preloadFadeOut");
-                    setTimeout(function () {
-                        prog.addClass("hidden");
-                        //prog.css({ 'display': 'none' });
-                    }, 500);
-                }, 2000);
-        }
-    </script>
     <div class="animated header">
         <div class="container header-buttons-container">
             <div class="row">
@@ -71,43 +28,43 @@
                     <a class="header-button" id="about-link" href="#">ABOUT FUND</a>
                     <div class="header-button-line" id="about-line"></div>
                 </div>
-                
+
                 <div class="drpdown">
-                    <a href="#" class="header-button dropdown-button" >WE HELPS</a>
+                    <a href="#" class="header-button dropdown-button">WE HELPS</a>
                     <span id="dropdown-arrow"></span>
-                        <div class="drpdown-menu row">
-                            <div class="col-xs-12 indent-dropdown"></div>
-                            <div class="col-xs-12 indent-dropdown"></div>
-                            <div class="col-xs-10 col-xs-offset-2">
-                                <span class="drpdown-link">
-                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Детям сиротам</a>
-                                </span>
-                            </div>
-                            <div class="col-xs-12 indent-dropdown"></div>
-                            <div class="col-xs-12">
-                                <span class="drpdown-link">
-                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Кризисным семьям</a>
-                                </span>
-                            </div>
-                            <div class="col-xs-12 indent-dropdown"></div>
-                            <div class="col-xs-12">
-                                <span class="drpdown-link">
-                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Социальная адаптация</a>
-                                </span>
-                            </div>
-                            <div class="col-xs-12 indent-dropdown"></div>
-                            <div class="col-xs-12">
-                                <span class="drpdown-link">
-                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Инвалидам</a>
-                                </span>
-                            </div>
-                            <div class="col-xs-12 indent-dropdown"></div>
-                            <div class="col-xs-12">
-                                <span class="drpdown-link">
-                                    <a class="semibold-text green" href="#">&nbsp;&nbsp;Лагеря</a>
-                                </span>
-                            </div>
+                    <div class="drpdown-menu row">
+                        <div class="col-xs-12 indent-dropdown"></div>
+                        <div class="col-xs-12 indent-dropdown"></div>
+                        <div class="col-xs-10 col-xs-offset-2">
+                            <span class="drpdown-link">
+                                <a class="semibold-text green" href="#">&nbsp;&nbsp;Детям сиротам</a>
+                            </span>
                         </div>
+                        <div class="col-xs-12 indent-dropdown"></div>
+                        <div class="col-xs-12">
+                            <span class="drpdown-link">
+                                <a class="semibold-text green" href="#">&nbsp;&nbsp;Кризисным семьям</a>
+                            </span>
+                        </div>
+                        <div class="col-xs-12 indent-dropdown"></div>
+                        <div class="col-xs-12">
+                            <span class="drpdown-link">
+                                <a class="semibold-text green" href="#">&nbsp;&nbsp;Социальная адаптация</a>
+                            </span>
+                        </div>
+                        <div class="col-xs-12 indent-dropdown"></div>
+                        <div class="col-xs-12">
+                            <span class="drpdown-link">
+                                <a class="semibold-text green" href="#">&nbsp;&nbsp;Инвалидам</a>
+                            </span>
+                        </div>
+                        <div class="col-xs-12 indent-dropdown"></div>
+                        <div class="col-xs-12">
+                            <span class="drpdown-link">
+                                <a class="semibold-text green" href="#">&nbsp;&nbsp;Лагеря</a>
+                            </span>
+                        </div>
+                    </div>
                 </div>
                 <div class="header-button-div">
                     <a class="header-button" href="#">НОВОСТИ</a>
@@ -147,7 +104,7 @@
             </div>
         </div>
         <div class="left-panel-menu">
-            
+
             <div class="positionize-left-memu">
                 <div class="col-xs-12">
                     <a class="intro-menu-text green" href="#">О ФОНДЕ</a>
@@ -166,7 +123,7 @@
                             <li><a class="left-panel-link" href="#">Лагеря</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
                 <div class="indent-menu-for-dropdown" id="indent-menu-for-dropdown"></div>
                 <div class="col-xs-12">
@@ -210,26 +167,26 @@
                         <path d="M73.099,15.973l-9.058,0.004c-7.102,0-8.477,3.375-8.477,8.328v10.921h16.938l-0.006,17.106H55.564v43.895H37.897V52.332
 		                        h-14.77V35.226h14.77V22.612C37.897,7.972,46.84,0,59.9,0L73.1,0.021L73.099,15.973L73.099,15.973z" />
                         </g>
-                    </svg>    
+                    </svg>
                     </a>
                 </div>
                 <div class="col-xs-12">
                     <a href="#" class="social-img" id="instagram-logo">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              width="30px" height="30px" viewBox="0 0 239.04 239.04" style="enable-background:new 0 0 239.04 239.04; fill:#6e644d;" xml:space="preserve">
-                            <g>
-                                <path style="fill:#FFFFFF;" d="M167.809,36.555c-22.276-0.183-44.597-1.054-66.919-0.504c-25.851,0.642-46.018,2.2-61.281,22.872
+                        <g>
+                        <path style="fill:#FFFFFF;" d="M167.809,36.555c-22.276-0.183-44.597-1.054-66.919-0.504c-25.851,0.642-46.018,2.2-61.281,22.872
 		                        c-3.988,9.854-6.004,21.359-6.967,33.368c-0.183,3.163-0.367,6.417-0.596,9.763c-0.825,20.396,0.55,41.435,0.092,58.118
 		                        c2.154,10.955,6.371,20.809,14.255,28.326c26.126,24.888,79.294,17.142,114.128,15.767c16.73-6.096,30.663-11.138,38.134-30.251
 		                        c5.913-15.034,4.95-34.193,5.363-50.326C204.797,90.502,206.264,44.714,167.809,36.555z" />
-                                <path d="M157.588,48.38c44.505,5.729,31.443,70.219,30.205,101.478c-0.688,17.188-3.758,30.48-21.496,36.438
+                        <path d="M157.588,48.38c44.505,5.729,31.443,70.219,30.205,101.478c-0.688,17.188-3.758,30.48-21.496,36.438
 		                        c-23.33,7.838-57.706,5.225-81.494,1.742c-15.905-2.292-28.372-7.059-32.772-23.559c-6.967-26.08-4.996-61.373-1.971-87.957
 		                        c0.092-0.504,0.229-0.871,0.458-1.192C50.93,35.547,134.441,45.401,157.588,48.38z" />
-                                <path style="fill:#FFFFFF;" d="M176.059,72.627c0.092-10.955-13.567-14.438-20.901-7.7c-1.971,1.833-2.888,4.629-3.025,7.654
+                        <path style="fill:#FFFFFF;" d="M176.059,72.627c0.092-10.955-13.567-14.438-20.901-7.7c-1.971,1.833-2.888,4.629-3.025,7.654
 		                        c0.733,3.896,3.071,7.746,6.096,9.946C165.334,87.523,175.967,80.877,176.059,72.627z" />
-                                <path style="fill:#FFFFFF;" d="M155.754,93.94c-15.675-23.742-51.06-26.08-70.081-5.042c-12.971,14.346-13.888,38.226-4.125,55.185
+                        <path style="fill:#FFFFFF;" d="M155.754,93.94c-15.675-23.742-51.06-26.08-70.081-5.042c-12.971,14.346-13.888,38.226-4.125,55.185
 		                        c0.55,0.183,1.054,0.504,1.513,1.054c15.859,17.692,43.176,24.109,62.794,8.067C163.363,138.858,168.496,113.236,155.754,93.94z" />
-                                                <path d="M93.282,126.483c5.546,15.584,25.255,27.959,40.976,18.334c31.763-19.434-5.546-72.235-31.718-48.814
+                        <path d="M93.282,126.483c5.546,15.584,25.255,27.959,40.976,18.334c31.763-19.434-5.546-72.235-31.718-48.814
 		                        C93.282,101.457,89.661,116.261,93.282,126.483z" />
 </g>
 </svg>
@@ -238,9 +195,9 @@
                 <div class="col-xs-12">
                     <a href="#" class="social-img">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                            width="25px" height="25px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310; fill:#6e644d;" xml:space="preserve">
-                            <g id="XMLID_822_">
-                            <path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
+                             width="25px" height="25px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310; fill:#6e644d;" xml:space="preserve">
+                        <g id="XMLID_822_">
+                        <path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
 		                    C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527
 		                    C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991
 		                    c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764
@@ -299,12 +256,12 @@
     <div class="left-tmp"></div>
     <div id="close-body" onclick="closeBodyClicked()"></div>
     <div class="site-body">
-        
-        
+
+
         @Scripts.Render("~/bundles/angular")
         @RenderSection("angularConfig", false)
         @RenderBody()
-        
+
     </div>
     <div class="footer">
         <div class="container">
@@ -340,7 +297,7 @@
                                 <a class="semibold-text green" href="#">Миссия</a>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div class="col-xs-2">
                     <div class="container">
@@ -454,7 +411,7 @@
                                 <div class="col-xs-12">
                                     <span class="semibold-text gray">г.Киев, ул.Радунская, 75</span><br />
                                     <span class="semibold-text gray">Центр Маяк</span>
-                                </div>                                
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -477,9 +434,57 @@
             </div>
         </div>
     </div>
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("scripts", false)
+
+    @RenderSection("styles", false)
+    <script type="text/javascript">
+        document.onreadystatechange = function (e) {
+            if (document.readyState == "interactive") {
+                var all = document.getElementsByTagName("*");
+                for (var i = 0, max = all.length; i < max; i++) {
+                    check_element(all[i]);
+                }
+            }
+        }
+        var loadComplete = false;
+        function check_element(ele) {
+            var all = document.getElementsByTagName("*");
+            var percantage = 100 / all.length;
+            if ($(ele).on()) {
+                var prog_width = percantage + Number(document.getElementById("progress_width").value);
+                if (prog_width > 100.1) {
+                    prog_width -= 100;
+                }
+                document.getElementById("progress_width").value = prog_width;
+                $("#bar1").animate({ width: prog_width + "%" }, 10, function () {
+                    if (Math.round(prog_width) == "100") {
+                        LoadComplete();
+                    }
+                    else {
+                    }
+                });
+            }
+
+            else {
+                set_ele(ele);
+            }
+        }
+        function LoadComplete() {
+                //$(".progress-preload").fadeOut("slow");
+                var prog = document.getElementById("prog");
+
+                setTimeout(function () {
+                    prog.classList.add("preloadFadeOut");
+                    document.getElementsByTagName("body")[0].classList.remove("hide-scroll");
+                    setTimeout(function () {
+                        prog.classList.add("hidden");
+                    }, 1400);
+                }, 3000);
+        }
+    </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/site.min.js")"></script>
 </body>
 
 </html>
-@Scripts.Render("~/bundles/modernizr")
-@RenderSection("scripts",false)
-<script type="text/javascript" src="~/Scripts/site.min.js"></script>

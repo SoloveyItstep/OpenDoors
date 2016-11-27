@@ -25,23 +25,24 @@ namespace OpenDoors
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/animate.min.css",
-                      "~/Content/bootstrap.min.css"));
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/preloader.min.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/angularEn").Include(
-                    "~/node_modules/core-js/client/shim.min.js",
-                    "~/node_modules/zone.js/dist/zone.js",
-                    "~/node_modules/reflect-metadata/Reflect.js",
-                    "~/node_modules/systemjs/dist/system.src.js",
-                    "~/Scripts/en/systemjs.config.js"
-                ));
+            //bundles.Add(new ScriptBundle("~/bundles/angularEn").Include(
+            //        "~/node_modules/core-js/client/shim.min.js",
+            //        "~/node_modules/zone.js/dist/zone.js",
+            //        "~/node_modules/reflect-metadata/Reflect.js",
+            //        "~/node_modules/systemjs/dist/system.src.js",
+            //        "~/Scripts/en/systemjs.config.js"
+            //    ));
 
-            bundles.Add(new ScriptBundle("~/bundles/angularRu").Include(
-                    "~/node_modules/core-js/client/shim.min.js",
-                    "~/node_modules/zone.js/dist/zone.js",
-                    "~/node_modules/reflect-metadata/Reflect.js",
-                    "~/node_modules/systemjs/dist/system.src.js",
-                    "~/Scripts/ru/systemjs.config.js"
-                ));
+            //bundles.Add(new ScriptBundle("~/bundles/angularRu").Include(
+            //        "~/node_modules/core-js/client/shim.min.js",
+            //        "~/node_modules/zone.js/dist/zone.js",
+            //        "~/node_modules/reflect-metadata/Reflect.js",
+            //        "~/node_modules/systemjs/dist/system.src.js",
+            //        "~/Scripts/ru/systemjs.config.js"
+            //    ));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/node_modules/core-js/client/shim.min.js",
