@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using OpenDoors.EntityDb.Data;
 using OpenDoors.EntityDb.UnitOfWork;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,14 @@ namespace OpenDoors.Areas.ru.Controllers
         {
             var data = unitOfWork.Slider.GetAllInLanguage("ru");
             return JsonConvert.SerializeObject(data);
+        }
+
+        public ActionResult Main()
+        {
+            ViewBag.lang = @"/en/Home/Main";
+            List<Slider> slider = unitOfWork.Slider.
+                GetAllInLanguage("ru").ToList();
+            return View(slider);
         }
     }
 }

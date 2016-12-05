@@ -1,0 +1,286 @@
+﻿.volunteer-box{
+    height: 300px;
+    z-index: 2;
+    left: auto;
+    right: auto;
+    position:relative;
+    padding-left: 100px;
+    text-align:center;
+}
+.center{
+    margin-top: -25px;
+    text-align: center;
+}
+.center div{
+    display: inline-block;
+    vertical-align: middle;
+}
+.volunteer-info{
+    text-align: left;
+    width: 400px;
+    height: 200px;
+    background-color: #11966f;
+    padding-top: 40px;
+    padding-left: 70px;
+    margin-right: -4px;
+    color:white;
+    font-family: Intro;
+    font-size: 30px;
+    opacity:0;
+}
+.volunteer-info span{
+    margin-bottom: 20px;
+}
+.volunteer-line{
+    margin-top: 20px;
+    width: 50px;
+    height:3px;
+    background-color: white;
+}
+.volunteer-image-block{
+    height: 300px;
+}
+.volunteer-image{
+    height: 300px;
+    opacity: 0;
+}
+.show-block{
+    -o-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -o-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -o-animation-name: showBlock;
+    -moz-animation-name: showBlock;
+    -webkit-animation-name: showBlock;
+    animation-name: showBlock;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    animation-delay: .5s;
+}
+.volunteer-image:hover, .volunteer-info:hover{
+    cursor:pointer;
+}
+@-o-keyframes showBlock{
+    0% {
+        opacity: 0;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+@-moz-keyframes showBlock{
+    0% {
+        opacity: 0;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+@-webkit-keyframes showBlock{
+    0% {
+        opacity: 0;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+@keyframes showBlock{
+    0% {
+        opacity: 0;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+.show-info-block{
+    -o-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -o-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -o-animation-name: showInfoBlock;
+    -moz-animation-name: showInfoBlock;
+    -webkit-animation-name: showInfoBlock;
+    animation-name: showInfoBlock;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -o-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+@-o-keyframes showInfoBlock{
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+@-moz-keyframes showInfoBlock{
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+@-webkit-keyframes showInfoBlock{
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+@keyframes showInfoBlock{
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -25px;
+    }
+}
+.hide-block {
+    -o-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -o-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -o-animation-name: hideBlock;
+    -moz-animation-name: hideBlock;
+    -webkit-animation-name: hideBlock;
+    animation-name: hideBlock;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+@-o-keyframes hideBlock{
+    0% {
+        opacity: 1;
+        margin-top: -20px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 0px;
+    }
+}
+@-moz-keyframes hideBlock{
+    0% {
+        opacity: 1;
+        margin-top: -20px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 0px;
+    }
+}
+@-webkit-keyframes hideBlock{
+    0% {
+        opacity: 1;
+        margin-top: -20px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 0px;
+    }
+}
+@keyframes hideBlock{
+    0% {
+        opacity: 1;
+        margin-top: -20px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 0px;
+    }
+}
+.hide-info-block {
+    -o-animation-duration: .5s;
+    -moz-animation-duration: .5s;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -o-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -o-animation-name: hideInfoBlock;
+    -moz-animation-name: hideInfoBlock;
+    -webkit-animation-name: hideInfoBlock;
+    animation-name: hideInfoBlock;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+@-o-keyframes hideInfoBlock{
+    0% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 20px;
+    }
+}
+@-moz-keyframes hideInfoBlock{
+    0% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 20px;
+    }
+}
+@-webkit-keyframes hideInfoBlock{
+    0% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 20px;
+    }
+}
+@keyframes hideInfoBlock{
+    0% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+    100%{
+        opacity: 0;
+        margin-top: 20px;
+    }
+}

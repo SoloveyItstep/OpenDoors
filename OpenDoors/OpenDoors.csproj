@@ -289,12 +289,20 @@
     <Content Include="Content\Images\happy_kids.gif" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\Main\main_small.jpg" />
+    <Content Include="Content\main\main-carousel.css" />
     <Content Include="Content\main-page-style.min.css">
       <DependentUpon>main-page-style.css</DependentUpon>
     </Content>
     <Content Include="Content\main\AppComponent.css" />
     <Content Include="Content\main\AppComponent.min.css">
       <DependentUpon>AppComponent.css</DependentUpon>
+    </Content>
+    <Content Include="Content\main\main-carousel.min.css">
+      <DependentUpon>main-carousel.css</DependentUpon>
+    </Content>
+    <Content Include="Content\main\volunteer-images.css" />
+    <Content Include="Content\main\volunteer-images.min.css">
+      <DependentUpon>volunteer-images.css</DependentUpon>
     </Content>
     <Content Include="Content\preloader.css" />
     <Content Include="Content\preloader.min.css">
@@ -374,6 +382,11 @@
     <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.ttf" />
     <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff" />
     <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff2" />
+    <Content Include="Areas\ru\Views\Home\_CarouselPartialView.cshtml" />
+    <Content Include="Areas\ru\Views\Home\Main.cshtml" />
+    <Content Include="Areas\ru\Views\Shared\_NewLayout.cshtml" />
+    <Content Include="Areas\en\Views\Home\Main.cshtml" />
+    <Content Include="Areas\en\Views\Home\_CarouselPartialView.cshtml" />
     <None Include="bundleconfig.json" />
     <None Include="Properties\PublishProfiles\open doors.pubxml" />
     <Content Include="Scripts\en\main\component.min.css">
@@ -463,11 +476,19 @@
     <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\demo.html" />
     <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.svg" />
     <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\stylesheet.css" />
+    <Content Include="Scripts\ru\main\Main-carousel.js" />
+    <Content Include="Scripts\ru\main\Main-carousel.min.js">
+      <DependentUpon>Main-carousel.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\ru\main\preloader.js" />
     <Content Include="Scripts\ru\main\preloader.min.js">
       <DependentUpon>preloader.js</DependentUpon>
     </Content>
     <Content Include="Scripts\ru\main\system.config.js" />
+    <Content Include="Scripts\ru\main\volunteer-image.js" />
+    <Content Include="Scripts\ru\main\volunteer-image.min.js">
+      <DependentUpon>volunteer-image.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\ru\main\volunteer-images.css" />
     <Content Include="Scripts\ru\main\volunteer-images.min.css">
       <DependentUpon>volunteer-images.css</DependentUpon>

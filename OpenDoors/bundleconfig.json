@@ -88,5 +88,29 @@
     "inputFiles": [
       "Content/main/AppComponent.css"
     ]
+  },
+  {
+    "outputFileName": "Scripts/ru/main/volunteer-image.min.js",
+    "inputFiles": [
+      "Scripts/ru/main/volunteer-image.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ru/main/Main-carousel.min.js",
+    "inputFiles": [
+      "Scripts/ru/main/Main-carousel.js"
+    ]
+  },
+  {
+    "outputFileName": "Content/main/main-carousel.min.css",
+    "inputFiles": [
+      "Content/main/main-carousel.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/main/volunteer-images.min.css",
+    "inputFiles": [
+      "Content/main/volunteer-images.css"
+    ]
   }
 ]
