@@ -36,5 +36,11 @@ namespace OpenDoors.Areas.en.Controllers
                 GetAllInLanguage("en").ToList();
             return View(slider);
         }
+
+        public ActionResult Contacts()
+        {
+            ViewBag.lang = @"/ru/home/contacts";
+            return View();
+        }
     }
 }

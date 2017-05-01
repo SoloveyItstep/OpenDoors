@@ -28,7 +28,8 @@
     </NuGetPackageImportStamp>
     <ApplicationInsightsResourceId>/subscriptions/029107d8-9b94-4527-9545-a6d1c354125b/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/OpenDoors</ApplicationInsightsResourceId>
     <TargetFrameworkProfile />
-    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/029107d8-9b94-4527-9545-a6d1c354125b/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/OpenDoors</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -240,14 +241,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DeviceHelper.cs" />
     <Compile Include="Inject\AutofacConf.cs" />
-    <Compile Include="Migrations\201611041848500_First.cs" />
-    <Compile Include="Migrations\201611041848500_First.Designer.cs">
-      <DependentUpon>201611041848500_First.cs</DependentUpon>
+    <Compile Include="Migrations\201701161544056_GalleryNews.cs" />
+    <Compile Include="Migrations\201701161544056_GalleryNews.Designer.cs">
+      <DependentUpon>201701161544056_GalleryNews.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611041921456_third.cs" />
-    <Compile Include="Migrations\201611041921456_third.Designer.cs">
-      <DependentUpon>201611041921456_third.cs</DependentUpon>
+    <Compile Include="Migrations\201701171313114_Tags.cs" />
+    <Compile Include="Migrations\201701171313114_Tags.Designer.cs">
+      <DependentUpon>201701171313114_Tags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701171317123_TagsLength.cs" />
+    <Compile Include="Migrations\201701171317123_TagsLength.Designer.cs">
+      <DependentUpon>201701171317123_TagsLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701171400081_NewsToGalleryAllowNull.cs" />
+    <Compile Include="Migrations\201701171400081_NewsToGalleryAllowNull.Designer.cs">
+      <DependentUpon>201701171400081_NewsToGalleryAllowNull.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -255,9 +265,20 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ModelJsonFormatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AngularLayout\main.css">
+      <DependentUpon>main.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\AngularLayout\main.min.css">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
     <Content Include="Content\animate.css" />
     <Content Include="Content\animate.min.css">
       <DependentUpon>animate.css</DependentUpon>
@@ -266,6 +287,20 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\close-button-style.css" />
+    <Content Include="Content\contacts\contacts.css">
+      <DependentUpon>contacts.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\contacts\contacts.min.css">
+      <DependentUpon>contacts.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts.css">
+      <DependentUpon>Fonts.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts.min.css">
+      <DependentUpon>Fonts.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Fonts\CloseButton\icomoon.svg" />
     <Content Include="Content\Fonts\Intro\demo.html" />
     <Content Include="Content\Fonts\Intro\Intro.svg" />
     <Content Include="Content\Fonts\Intro\stylesheet.css" />
@@ -279,6 +314,7 @@
     <Content Include="Content\Fonts\OpenSans-Semibold\OpenSans-Semibold.svg" />
     <Content Include="Content\Fonts\OpenSans-Semibold\stylesheet.css" />
     <Content Include="Content\icons\facebook-logo.svg" />
+    <Content Include="Content\icons\Favicon.png" />
     <Content Include="Content\icons\instagram.svg" />
     <Content Include="Content\icons\vk.svg" />
     <Content Include="Content\icons\youtube.svg" />
@@ -286,10 +322,13 @@
     <Content Include="Content\Images\Carousel\banner2.jpg" />
     <Content Include="Content\Images\Carousel\banner3.jpg" />
     <Content Include="Content\Images\Carousel\banner4.jpg" />
+    <Content Include="Content\Images\Contacts\bg_contact.jpg" />
     <Content Include="Content\Images\happy_kids.gif" />
+    <Content Include="Content\Images\logo.m.png" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\Main\main_small.jpg" />
-    <Content Include="Content\main\main-carousel.css" />
+    <Content Include="Content\Images\News\NewsPreview.jpg" />
+    <None Include="Content\main\main-carousel.scss" />
     <Content Include="Content\main-page-style.min.css">
       <DependentUpon>main-page-style.css</DependentUpon>
     </Content>
@@ -297,12 +336,75 @@
     <Content Include="Content\main\AppComponent.min.css">
       <DependentUpon>AppComponent.css</DependentUpon>
     </Content>
+    <Content Include="Content\main\main-carousel.css">
+      <DependentUpon>main-carousel.scss</DependentUpon>
+    </Content>
     <Content Include="Content\main\main-carousel.min.css">
       <DependentUpon>main-carousel.css</DependentUpon>
     </Content>
     <Content Include="Content\main\volunteer-images.css" />
     <Content Include="Content\main\volunteer-images.min.css">
       <DependentUpon>volunteer-images.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\Contacts\contacts.css">
+      <DependentUpon>contacts.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\Contacts\contacts.min.css">
+      <DependentUpon>contacts.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\Contacts\LeftMenuStyle.css">
+      <DependentUpon>LeftMenuStyle.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\Contacts\LeftMenuStyle.min.css">
+      <DependentUpon>LeftMenuStyle.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\Contacts\Fonts.css">
+      <DependentUpon>Fonts.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\Contacts\Fonts.min.css">
+      <DependentUpon>Fonts.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\m.header.css">
+      <DependentUpon>m.header.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\m.header.min.css">
+      <DependentUpon>m.header.css</DependentUpon>
+    </Content>
+    <Content Include="Content\NewsList\Header.css">
+      <DependentUpon>Header.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\NewsList\Header.min.css">
+      <DependentUpon>Header.css</DependentUpon>
+    </Content>
+    <Content Include="Content\NewsList\list.main.css">
+      <DependentUpon>list.main.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\NewsList\list.main.min.css">
+      <DependentUpon>list.main.css</DependentUpon>
+    </Content>
+    <Content Include="Content\SecondLayoutStyle\Fonts.css">
+      <DependentUpon>Fonts.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\SecondLayoutStyle\Fonts.min.css">
+      <DependentUpon>Fonts.css</DependentUpon>
+    </Content>
+    <Content Include="Content\SecondLayoutStyle\FooterStyle.css">
+      <DependentUpon>FooterStyle.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\SecondLayoutStyle\FooterStyle.min.css">
+      <DependentUpon>FooterStyle.css</DependentUpon>
+    </Content>
+    <Content Include="Content\SecondLayoutStyle\LeftMenuStyle.css">
+      <DependentUpon>LeftMenuStyle.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\SecondLayoutStyle\LeftMenuStyle.min.css">
+      <DependentUpon>LeftMenuStyle.css</DependentUpon>
+    </Content>
+    <Content Include="Content\SecondLayoutStyle\main.css">
+      <DependentUpon>main.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\SecondLayoutStyle\main.min.css">
+      <DependentUpon>main.css</DependentUpon>
     </Content>
     <Content Include="Content\preloader.css" />
     <Content Include="Content\preloader.min.css">
@@ -387,7 +489,44 @@
     <Content Include="Areas\ru\Views\Shared\_NewLayout.cshtml" />
     <Content Include="Areas\en\Views\Home\Main.cshtml" />
     <Content Include="Areas\en\Views\Home\_CarouselPartialView.cshtml" />
+    <Content Include="Areas\en\Views\Shared\_NewLayout.cshtml" />
+    <Content Include="Areas\ru\Views\Shared\_MobileLayout.cshtml" />
+    <Content Include="Areas\ru\Views\Shared\_SecondLayout.cshtml" />
+    <Content Include="Areas\ru\Views\Home\News.cshtml" />
+    <Content Include="Areas\ru\Views\Home\_LeftMenuPartialView.cshtml" />
+    <Content Include="Areas\ru\Views\Home\_FooterPartialView.cshtml" />
+    <Content Include="Areas\ru\Views\Home\_NewsHeaderPartialView.cshtml" />
+    <Content Include="Areas\ru\Views\Shared\_AngularLayout.cshtml" />
+    <Content Include="Areas\ru\Views\Home\NewsCopy.cshtml" />
+    <Content Include="Areas\ru\Views\Home\Contacts.cshtml" />
+    <Content Include="Areas\en\Views\Home\Contacts.cshtml" />
+    <Content Include="Areas\en\Views\Shared\_SecondLayout.cshtml" />
+    <Content Include="Areas\en\Views\Home\_LeftMenuPartialView.cshtml" />
+    <Content Include="Areas\en\Views\Home\_FooterPartialView.cshtml" />
+    <Content Include="Areas\ru\Views\Home\_MobilePartial.cshtml" />
     <None Include="bundleconfig.json" />
+    <Content Include="Content\Fonts\CloseButton\icomoon.eot" />
+    <Content Include="Content\Fonts\CloseButton\icomoon.ttf" />
+    <Content Include="Content\Fonts\CloseButton\icomoon.woff" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Content\SecondLayoutStyle\LeftMenuStyle.scss" />
+    <Content Include="Content\SecondLayoutStyle\main.scss" />
+    <Content Include="Content\SecondLayoutStyle\Fonts.scss" />
+    <Content Include="Content\SecondLayoutStyle\FooterStyle.scss" />
+    <Content Include="Content\NewsList\Header.scss" />
+    <Content Include="Content\AngularLayout\main.scss" />
+    <Content Include="Content\contacts\contacts.scss" />
+    <Content Include="Content\Mobile\Contacts\contacts.scss" />
+    <Content Include="Content\Fonts.scss" />
+    <Content Include="Content\Mobile\Contacts\LeftMenuStyle.scss" />
+    <Content Include="Content\Mobile\Contacts\Fonts.scss" />
+    <None Include="Content\Mobile\m.header.scss" />
+    <None Include="Content\NewsList\list.main.scss" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Properties\PublishProfiles\Solovey-kiev.pubxml" />
     <None Include="Properties\PublishProfiles\open doors.pubxml" />
     <Content Include="Scripts\en\main\component.min.css">
       <DependentUpon>component.css</DependentUpon>
@@ -410,6 +549,10 @@
     <Content Include="Scripts\en\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.ttf" />
     <Content Include="Scripts\en\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff" />
     <Content Include="Scripts\en\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff2" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -444,6 +587,8 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.nicescroll.js" />
+    <Content Include="Scripts\jquery.nicescroll.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -497,13 +642,68 @@
     <Content Include="Scripts\ru\main\volunteer.min.html">
       <DependentUpon>volunteer.html</DependentUpon>
     </Content>
+    <Content Include="Scripts\ru\Mobile\Contacts.es5.js">
+      <DependentUpon>Contacts.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\Mobile\Contacts.es5.min.js">
+      <DependentUpon>Contacts.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\Mobile\Contacts.js" />
+    <Content Include="Scripts\ru\Mobile\layout.es5.js">
+      <DependentUpon>layout.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\Mobile\layout.es5.min.js">
+      <DependentUpon>layout.es5.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\Mobile\layout.js" />
+    <Content Include="Scripts\ru\newsList\app\app.component.css">
+      <DependentUpon>app.component.scss</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\newsList\app\app.component.html" />
+    <Content Include="Scripts\ru\newsList\app\app.component.min.css">
+      <DependentUpon>app.component.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\newsList\app\system.config.js" />
+    <Content Include="Scripts\ru\newsList\ListApp\app.component.style.css">
+      <DependentUpon>app.component.style.scss</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\newsList\ListApp\app.component.style.min.css">
+      <DependentUpon>app.component.style.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\newsList\ListApp\AppMain.html" />
+    <Content Include="Scripts\ru\newsList\ListApp\Header\header.html" />
+    <Content Include="Scripts\ru\newsList\ListApp\LeftMenu\Fonts.css">
+      <DependentUpon>Fonts.scss</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\newsList\ListApp\LeftMenu\Fonts.min.css">
+      <DependentUpon>Fonts.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\newsList\ListApp\LeftMenu\left.menu.html" />
+    <Content Include="Scripts\ru\newsList\ListApp\LeftMenu\LeftMenuStyle.css">
+      <DependentUpon>LeftMenuStyle.scss</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\newsList\ListApp\LeftMenu\LeftMenuStyle.min.css">
+      <DependentUpon>LeftMenuStyle.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\newsList\ListApp\system.config.js" />
+    <Content Include="Scripts\ru\newsList\slowScroll.js" />
+    <Content Include="Scripts\ru\SecondLayout\leftMenu.js" />
+    <Content Include="Scripts\ru\SecondLayout\leftMenu.min.js">
+      <DependentUpon>leftMenu.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\site.js" />
     <Content Include="Scripts\site.min.js">
       <DependentUpon>site.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\TMP.js" />
+    <Content Include="Scripts\TMP.min.js">
+      <DependentUpon>TMP.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\_references.js" />
     <Content Include="systemjs.config.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -559,6 +759,11 @@
     <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.ttf" />
     <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff" />
     <Content Include="Scripts\ru\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff2" />
+    <Content Include="Scripts\ru\newsList\app\app.component.scss" />
+    <Content Include="Scripts\ru\newsList\ListApp\LeftMenu\LeftMenuStyle.scss" />
+    <Content Include="Scripts\ru\newsList\ListApp\LeftMenu\Fonts.scss" />
+    <Content Include="Scripts\ru\newsList\ListApp\Header\header-style.scss" />
+    <None Include="Scripts\ru\newsList\ListApp\app.component.style.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -567,6 +772,8 @@
     <Folder Include="Areas\admin\Views\Shared\" />
     <Folder Include="Areas\en\Models\" />
     <Folder Include="Areas\ru\Models\" />
+    <Folder Include="Scripts\en\news\" />
+    <Folder Include="Scripts\ru\newsList\app\Directives\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -596,21 +803,45 @@
     <TypeScriptCompile Include="Scripts\ru\main\module.ts" />
     <TypeScriptCompile Include="Scripts\ru\main\Photo.ts" />
     <TypeScriptCompile Include="Scripts\ru\main\volunteer-images.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\app\app.component.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\app\app.module.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\app\Helpers\scroll.positionize.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\app\Services\data.service.index.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\app\Entities\News.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\app\Entities\Tag.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\app\Services\data.service.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\app\main.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\ListApp\app.module.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\ListApp\app.component.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\ListApp\Header\header.component.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\ListApp\LeftMenu\ClickOutsideDirective.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\ListApp\LeftMenu\left.menu.component.ts" />
+    <TypeScriptCompile Include="Scripts\ru\newsList\ListApp\main.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611041848500_First.resx">
-      <DependentUpon>201611041848500_First.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701161544056_GalleryNews.resx">
+      <DependentUpon>201701161544056_GalleryNews.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611041921456_third.resx">
-      <DependentUpon>201611041921456_third.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201701171313114_Tags.resx">
+      <DependentUpon>201701171313114_Tags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701171317123_TagsLength.resx">
+      <DependentUpon>201701171317123_TagsLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701171400081_NewsToGalleryAllowNull.resx">
+      <DependentUpon>201701171400081_NewsToGalleryAllowNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />

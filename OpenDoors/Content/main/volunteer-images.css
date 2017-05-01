@@ -61,7 +61,7 @@
     -moz-animation-timing-function: ease-out;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
-    animation-delay: .5s;
+    /*animation-delay: .5s;*/
 }
 .volunteer-image:hover, .volunteer-info:hover{
     cursor:pointer;

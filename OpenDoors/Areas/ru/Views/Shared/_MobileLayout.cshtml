@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Mobile/m.header.min.css" />
+    @RenderSection("styles", false)
+</head>
+<body>
+    @Html.Partial("_MobilePartial")
+    @RenderBody()
+    <div id="footer">
+        <div class="footer-link">
+            <span id="open-doors-footer">МБФ "Открытые двери"</span>
+        </div>
+        <div class="footer-link">
+            Made By&nbsp;
+            <a href="http://urbanf.org" id="uf-link">UF</a>
+        </div>
+    </div>
+    @RenderSection("scripts", false)
+    <script src="~/Scripts/ru/Mobile/layout.es5.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Новости Opendoors";
+    Layout = "~/Areas/ru/Views/Shared/_AngularLayout.cshtml";
+    //String pageName = ViewBag.PageName;
+}
+@section angular{
+    <script src="~/Scripts/ru/newsList/ListApp/system.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) {
+            console.log(err);
+        });
+    </script>
+}
+<ng-body>
+    <div id="preloader">
+        <img src="~/Content/Images/happy_kids.gif" id="preloader-image" />
+    </div>
+</ng-body>
+
+@*@section renderStyles{
+    <link type="text/css" rel="stylesheet" href="~/Content/NewsList/Header.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/NewsList/list.main.min.css" />
+    }
+@section Header{
+    <div id="header">
+        <div id="header-bread-crumbs">
+            <span class="bread-crumbs">
+                <a href="/ru/Home/Main">ГЛАВНАЯ</a>
+            </span>
+            <div class="rhomb-container">
+                <div class="rhomb"></div>
+            </div>
+            <span class="bread-crumbs">НОВОСТИ</span>
+        </div>
+    </div>
+}
+
+<my-app id="ngBody">
+    <div id="preloader">
+        <img src="~/Content/Images/happy_kids.gif" id="preloader-image"/>
+    </div>
+</my-app>
+<div style="width: 900px; height: 500px; background-color: yellow;"></div>
+
+@section scripts{
+        <script src="~/Scripts/ru/newsList/slowScroll.js"></script>
+}*@

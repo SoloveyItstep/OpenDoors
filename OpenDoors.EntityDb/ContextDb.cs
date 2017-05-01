@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Data.Entity;
 using OpenDoors.EntityDb.Data;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace OpenDoors.EntityDb
 {
     public class ContextDb:DbContext, IContextDb
     {
         public ContextDb()
-            :base(@"Data Source=DESKTOP-0QC9GCN\SQLEXPRESS;Initial Catalog=OpenDoorsFund;Integrated Security=True")
+            :base(@"Data Source=DESKTOP-8GG7PPQ\SQLEXPRESS;Initial Catalog=OpenDoorsFund;Integrated Security=True")
         {
             //examples not for Context class
 
@@ -28,6 +29,14 @@ namespace OpenDoors.EntityDb
         public DbSet<Photo> Photo { get; set; }
         public DbSet<Slider> Slidser { get; set; }
         public DbSet<Volunteer> Volunteer { get; set; }
+        public DbSet<News> News { get; set; }
+        public DbSet<Gallery> Gallery { get; set; }
+        public DbSet<Tag> Tag { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+        }
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{

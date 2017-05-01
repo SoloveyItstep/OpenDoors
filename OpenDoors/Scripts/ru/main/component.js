@@ -135,17 +135,17 @@ var AppComponent = (function () {
         this.imageClasses[itemNumber] = !this.imageClasses[itemNumber];
         this.ShowText(itemNumber);
     };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: "app-carousel",
-            moduleId: module.id,
-            templateUrl: "./component.html",
-            styleUrls: ['./component.min.css'],
-            animations: []
-        }), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: "app-carousel",
+        moduleId: module.id,
+        templateUrl: "./component.html",
+        styleUrls: ['./component.min.css'],
+        animations: []
+    }),
+    __metadata("design:paramtypes", [http_1.Http])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=component.js.map

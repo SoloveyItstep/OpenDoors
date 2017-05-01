@@ -18,5 +18,8 @@ namespace OpenDoors.EntityDb
         DbSet<Photo> Photo { get; set; }
         DbSet<Slider> Slidser { get; set; }
         DbSet<Volunteer> Volunteer { get; set; }
+        DbSet<News> News { get; set; }
+        DbSet<Gallery> Gallery { get; set; }
+        DbSet<Tag> Tag { get; set; }
     }
 }

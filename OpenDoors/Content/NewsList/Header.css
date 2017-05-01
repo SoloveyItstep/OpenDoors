@@ -1,0 +1,44 @@
+﻿@import url(../SecondLayoutStyle/Fonts.min.css);
+#header {
+  margin-left: 100px;
+  width: calc(100% - 120px);
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 50px;
+  background-color: white;
+  z-index: 20; }
+
+body {
+  padding-top: 100px; }
+
+.bread-crumbs, .bread-crumbs a {
+  font-family: OpenSans-Semibold;
+  color: #11966f;
+  transition: color ease-in-out .2s; }
+
+.bread-crumbs a:hover {
+  text-decoration: underline;
+  color: #6e644d;
+  transition: color ease-in-out .2s; }
+
+.bread-crumbs {
+  color: #6e644d; }
+
+.rhomb-container {
+  width: 6px;
+  height: 12px;
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+.rhomb {
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+  background-color: #6e644d;
+  margin-top: 3px; }
+

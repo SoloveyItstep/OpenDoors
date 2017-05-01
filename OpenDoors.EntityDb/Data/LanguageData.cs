@@ -12,6 +12,8 @@ namespace OpenDoors.EntityDb.Data
             Volunteers = new HashSet<Volunteer>();
             Covers = new HashSet<Cover>();
             Descriptions = new HashSet<Description>();
+            Gallery = new HashSet<Gallery>();
+            News = new HashSet<News>();
         }
 
         [Key]
@@ -21,5 +23,7 @@ namespace OpenDoors.EntityDb.Data
         public virtual ICollection<Volunteer> Volunteers { get; set; }
         public virtual ICollection<Cover> Covers { get; set; }
         public virtual ICollection<Description> Descriptions { get; set; }
+        public virtual ICollection<Gallery> Gallery { get; set; }
+        public virtual ICollection<News> News { get; set; }
     }
 }

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html class="html-size">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link type="image/png" rel="icon" href="~/Content/icons/Favicon.png" />
+    @*@Scripts.Render("~/bundles/angular")*@
+    @*@RenderSection("angular", false)*@
+    @RenderSection("renderStyles",false)
+    <link type="text/css" href="~/Content/SecondLayoutStyle/main.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/SecondLayoutStyle/LeftMenuStyle.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/SecondLayoutStyle/FooterStyle.css" rel="stylesheet" />
+    @*@Styles.Render("~/Content/SecondLayoutStyle")*@
+    @Scripts.Render("~/Scripts/SecondLayout")
+</head>
+<body>
+    @Html.Partial("_LeftMenuPartialView")
+    @RenderSection("Header", false)
+    <div id="body-container">
+        @RenderBody()
+    </div>
+    <div id="footer-container">
+        @Html.Partial("_footerPartialView")
+    </div>
+    @RenderSection("scripts", false);
+</body>
+</html>

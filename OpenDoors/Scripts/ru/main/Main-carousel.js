@@ -1,7 +1,7 @@
 ﻿var elements = [false, false, false, false];
 var imageInterval;
 var titles, descriptions, names, buttons;
-var images;
+var images, numberButtons;
 
 function CarouselOnLoad() {
     images = document.getElementsByClassName("image");
@@ -9,12 +9,14 @@ function CarouselOnLoad() {
     descriptions = document.getElementsByClassName("description");
     names = document.getElementsByClassName("name");
     buttons = document.getElementsByClassName("readmore-button");
+    numberButtons = document.getElementsByClassName("page-number");
 
     images[0].classList.remove("hidden-image");
     images[0].classList.add("show-animated");
+    numberButtons[0].classList.add("yellow");
     elements[0] = true;
     ShowText();
-
+    ActiveButtons();
     for (var i = 0; i < images.length; ++i) {
         images[i].style.top = "-"+(i*100)+"%";
     }
@@ -34,6 +36,7 @@ function LoadCycle() {
                 elements[j] = true;
                 ShowText();
                 HideText(i);
+                ActiveButtons();
                 break;
             }
         }
@@ -119,6 +122,7 @@ function Slide(next, previous) {
 
     HideText(previous);
     ShowText();
+    ActiveButtons();
 }
 
 function SlideToNumber(index) {
@@ -126,4 +130,18 @@ function SlideToNumber(index) {
     var previous = GetIndex();
     Slide(index,previous);
     LoadCycle();
+    ActiveButtons();
+}
+
+function ActiveButtons() {
+    for (var i = 0; i < 4; ++i) {
+        if (elements[i]) {
+            numberButtons[i].classList.remove("white");
+            numberButtons[i].classList.add("yellow");
+        }
+        else {
+            numberButtons[i].classList.remove("yellow");
+            numberButtons[i].classList.add("white");
+        }
+    }
 }

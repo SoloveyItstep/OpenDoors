@@ -4,8 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    <link type="image/png" rel="icon" href="~/Content/icons/Favicon.png"/>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("styles", false)
+    <link href="~/Content/close-button-style.css" rel="stylesheet" type="text/css" />
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <style>
+        /*=============Temporary onload menu*/
+#development{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    margin-left: 35%;
+    margin-top: 10%;
+    background-color: white;
+    z-index: 100;
+}
+.close-button-hide{
+    left: -500px;
+    visibility: hidden;
+}
+#dev-text{
+    margin-top: 70px;
+    font-size: 16px;
+    color: darkgray;
+    position:absolute;
+    text-align: center;
+    margin-left: 20px;
+}
+    </style>
 </head>
 <body class="hide-scroll">
     <div class="preloader " id="prog">
@@ -20,7 +47,18 @@
             </div>
         </div>
     </div>
-
+    @*To delete*@
+    <div id="development" class="animated close-button-hide">
+        <div id="dev-close-button"></div>
+        <div id="view-field">
+            <span class="icon-cross" onclick="CloseSorryMenu()"></span>
+            <span id="dev-text">
+                На данный момент сайт находится в разработке<br /><br />
+                и некоторый функционал недоступен.<br /><br /><br />
+                <h4>Спасибо за понимание!</h4>
+            </span>
+        </div>
+    </div>
     <div class="animated header">
         <div class="container header-buttons-container">
             <div class="row">
@@ -30,7 +68,17 @@
                 </div>
 
                 <div class="drpdown">
-                    <a href="#" class="header-button dropdown-button">МЫ ПОМОГАЕМ</a>
+                    <dl style="left:6px;" id="drp">
+                        <span id="dropdown-arrow" class="arrow-ru"></span>
+                        <dt class=""><a class="header-button">МЫ ПОМОГАЕМ</a></dt>
+
+                        <dd><a class="drpdwn intro-text-min" href="#">Детям сиротам</a></dd>
+                        <dd><a class="drpdwn intro-text-min" href="#">Кризисным семьям</a></dd>
+                        <dd><a class="drpdwn intro-text-min" href="#">Социальная адаптация</a></dd>
+                        <dd><a class="drpdwn intro-text-min" href="#">Инвалидам</a></dd>
+                        <dd><a class="drpdwn intro-text-min" href="#">Лагеря</a></dd>
+                    </dl>
+                    @*<a href="#" class="header-button dropdown-button">МЫ ПОМОГАЕМ</a>
                     <span id="dropdown-arrow"></span>
                     <div class="drpdown-menu row">
                         <div class="col-xs-12 indent-dropdown"></div>
@@ -64,7 +112,7 @@
                                 <a class="semibold-text green" href="#">&nbsp;&nbsp;Лагеря</a>
                             </span>
                         </div>
-                    </div>
+                    </div>*@
                 </div>
                 <div class="header-button-div">
                     <a class="header-button" href="#">НОВОСТИ</a>
@@ -75,7 +123,7 @@
                     <div class="header-button-line"></div>
                 </div>
                 <div class="header-button-div">
-                    <a class="header-button" href="#">КОНТАКТЫ</a>
+                    <a class="header-button" href="/ru/home/contacts">КОНТАКТЫ</a>
                     <div class="header-button-line"></div>
                 </div>
                 <div class="header-button-div">
@@ -135,7 +183,7 @@
                 </div>
                 <div class="indent-menu"></div>
                 <div class="col-xs-12">
-                    <a class="intro-menu-text green" href="#">КОНТАКТЫ</a>
+                    <a class="intro-menu-text green" href="/ru/home/contacts">КОНТАКТЫ</a>
                 </div>
                 <div class="indent-menu"></div>
                 <div class="col-xs-12">
@@ -159,7 +207,7 @@
             </div>
             <div class="col-xs-12 social">
                 <div class="col-xs-12">
-                    <a href="#" class="social-img">
+                    <a href="https://www.facebook.com/opendoorsfund/" class="social-img">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              width="25px" height="25px" viewBox="0 0 96.227 96.227" style="enable-background:new 0 0 30 30; fill:#6e644d;"
                              xml:space="preserve">
@@ -171,29 +219,7 @@
                     </a>
                 </div>
                 <div class="col-xs-12">
-                    <a href="#" class="social-img" id="instagram-logo">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             width="30px" height="30px" viewBox="0 0 239.04 239.04" style="enable-background:new 0 0 239.04 239.04; fill:#6e644d;" xml:space="preserve">
-                        <g>
-                        <path style="fill:#FFFFFF;" d="M167.809,36.555c-22.276-0.183-44.597-1.054-66.919-0.504c-25.851,0.642-46.018,2.2-61.281,22.872
-		                        c-3.988,9.854-6.004,21.359-6.967,33.368c-0.183,3.163-0.367,6.417-0.596,9.763c-0.825,20.396,0.55,41.435,0.092,58.118
-		                        c2.154,10.955,6.371,20.809,14.255,28.326c26.126,24.888,79.294,17.142,114.128,15.767c16.73-6.096,30.663-11.138,38.134-30.251
-		                        c5.913-15.034,4.95-34.193,5.363-50.326C204.797,90.502,206.264,44.714,167.809,36.555z" />
-                        <path d="M157.588,48.38c44.505,5.729,31.443,70.219,30.205,101.478c-0.688,17.188-3.758,30.48-21.496,36.438
-		                        c-23.33,7.838-57.706,5.225-81.494,1.742c-15.905-2.292-28.372-7.059-32.772-23.559c-6.967-26.08-4.996-61.373-1.971-87.957
-		                        c0.092-0.504,0.229-0.871,0.458-1.192C50.93,35.547,134.441,45.401,157.588,48.38z" />
-                        <path style="fill:#FFFFFF;" d="M176.059,72.627c0.092-10.955-13.567-14.438-20.901-7.7c-1.971,1.833-2.888,4.629-3.025,7.654
-		                        c0.733,3.896,3.071,7.746,6.096,9.946C165.334,87.523,175.967,80.877,176.059,72.627z" />
-                        <path style="fill:#FFFFFF;" d="M155.754,93.94c-15.675-23.742-51.06-26.08-70.081-5.042c-12.971,14.346-13.888,38.226-4.125,55.185
-		                        c0.55,0.183,1.054,0.504,1.513,1.054c15.859,17.692,43.176,24.109,62.794,8.067C163.363,138.858,168.496,113.236,155.754,93.94z" />
-                        <path d="M93.282,126.483c5.546,15.584,25.255,27.959,40.976,18.334c31.763-19.434-5.546-72.235-31.718-48.814
-		                        C93.282,101.457,89.661,116.261,93.282,126.483z" />
-</g>
-</svg>
-                    </a>
-                </div>
-                <div class="col-xs-12">
-                    <a href="#" class="social-img">
+                    <a href="https://www.youtube.com/channel/UCM5h8RAS_S2V6dgAxrquYUw" class="social-img">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              width="25px" height="25px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310; fill:#6e644d;" xml:space="preserve">
                         <g id="XMLID_822_">
@@ -208,7 +234,7 @@
                     </a>
                 </div>
                 <div class="col-xs-12">
-                    <a class="social-img" href="#">
+                    <a class="social-img" href="https://vk.com/opendoorsfund">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              width="25px" height="25px" viewBox="0 0 532.337 532.337" style="enable-background:new 0 0 532.337 532.337; fill:#6e644d;"
                              xml:space="preserve">
@@ -259,137 +285,15 @@
         @RenderSection("angularConfig", false)
         @RenderBody()
     </div>
-
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-xs-2 col-xs-offset-2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="intro-text green" href="#">О ФОНДЕ</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="semibold-text green" href="#">Партнеры</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="semibold-text green" href="#">Волонтеры</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="semibold-text green" href="#">Миссия</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="intro-text green" href="#">МЫ ПОМОГАЕМ</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="semibold-text green" href="#">Детям сиротам</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="semibold-text green" href="#">Кризисным семьям</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="semibold-text green" href="#">Социальная адаптация</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="semibold-text green" href="#">Инвалидам</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="semibold-text green" href="#">Лагеря</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-2 col-xs-offset-1">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="intro-text green" href="#">НОВОСТИ</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="intro-text green" href="#">ГАЛЕРЕЯ</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="intro-text green" href="#">КОНТАКТЫ</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <a class="intro-text green" href="#">ПОДДЕРЖКА</a>
-                            </div>
-                            <div class="col-xs-12 indent">
-                                <br />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-2">
+                <div class="col-xs-11 col-xs-offset-1">
                     <div class="col-xs-2 col-xs-offset-1">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <span class="intro-text gray">КОНТАКТЫ</span>
+                                    <a class="intro-text green" href="#">О ФОНДЕ</a>
                                 </div>
                                 <div class="col-xs-12 indent">
                                     <br />
@@ -397,8 +301,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <span class="semibold-text gray">Горячая линия:</span><br />
-                                    <span class="semibold-text gray">044&nbsp;265&nbsp;45&nbsp;78</span>
+                                    <a class="semibold-text green" href="#">Партнеры</a>
                                 </div>
                                 <div class="col-xs-12 indent">
                                     <br />
@@ -406,15 +309,155 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <span class="semibold-text gray">г.Киев, ул.Радунская, 75</span><br />
-                                    <span class="semibold-text gray">Центр Маяк</span>
+                                    <a class="semibold-text green" href="#">Волонтеры</a>
+                                </div>
+                                <div class="col-xs-12 indent">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a class="semibold-text green" href="#">Миссия</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a class="intro-text green" href="#">МЫ ПОМОГАЕМ</a>
+                                </div>
+                                <div class="col-xs-12 indent">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a class="semibold-text green" href="#">Детям сиротам</a>
+                                </div>
+                                <div class="col-xs-12 indent">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a class="semibold-text green" href="#">Кризисным семьям</a>
+                                </div>
+                                <div class="col-xs-12 indent">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a class="semibold-text green" href="#">Социальная адаптация</a>
+                                </div>
+                                <div class="col-xs-12 indent">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a class="semibold-text green" href="#">Инвалидам</a>
+                                </div>
+                                <div class="col-xs-12 indent">
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <a class="semibold-text green" href="#">Лагеря</a>
+                                </div>
+                                <div class="col-xs-12 indent">
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        @*col-xs-offset-1*@
+                        <div class="col-xs-offset-4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a class="intro-text green" href="#">НОВОСТИ</a>
+                                    </div>
+                                    <div class="col-xs-12 indent">
+                                        <br />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a class="intro-text green" href="#">ГАЛЕРЕЯ</a>
+                                    </div>
+                                    <div class="col-xs-12 indent">
+                                        <br />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a class="intro-text green" href="/ru/home/contacts">КОНТАКТЫ</a>
+                                    </div>
+                                    <div class="col-xs-12 indent">
+                                        <br />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a class="intro-text green" href="#">ПОДДЕРЖКА</a>
+                                    </div>
+                                    <div class="col-xs-12 indent">
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-2">
+                        <div class="col-xs-2 col-xs-offset-1">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <span class="intro-text gray">КОНТАКТЫ</span>
+                                    </div>
+                                    <div class="col-xs-12 indent">
+                                        <br />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <span class="semibold-text gray">г.Киев 02081</span><br />
+                                        <span class="semibold-text gray">ул.Сортировочная д.5</span>
+                                    </div>
+                                    <div class="col-xs-12 indent">
+                                        <br />
+                                    </div>
+                                </div>
+                                @*<div class="row">
+                                        <div class="col-xs-12">
+                                            <span class="semibold-text gray">Горячая линия:</span><br />
+                                            <span class="semibold-text gray">044&nbsp;265&nbsp;45&nbsp;78</span>
+                                        </div>
+                                        <div class="col-xs-12 indent">
+                                            <br />
+                                        </div>
+                                    </div>*@
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <span class="semibold-text gray">opendoorsfund@gmail.com</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="row">
+                <div class="col-xs-12 indent">
+                    <br />
+                </div>
                 <div class="col-xs-12 indent">
                     <br />
                 </div>
@@ -431,57 +474,55 @@
             </div>
         </div>
     </div>
-    @RenderSection("scripts", false)
-    @RenderSection("styles", false)
     <script type="text/javascript">
         var key = false;
-        document.onreadystatechange = function (e) {
-            if (document.readyState == "interactive") {
-                var all = document.getElementsByTagName("*");
-                for (var i = 0, max = all.length; i < max; i++) {
-                    check_element(all[i]);
-                }
-            }
-        }
-        var loadComplete = false;
-        function check_element(ele) {
-            var all = document.getElementsByTagName("*");
-            var percantage = 100 / all.length;
-            if ($(ele).on()) {
-                var prog_width = percantage + Number(document.getElementById("progress_width").value);
-                if (prog_width > 100.1) {
-                    prog_width -= 100;
-                }
-                document.getElementById("progress_width").value = prog_width;
-                $("#bar1").animate({ width: prog_width + "%" }, 10, function () {
-                    if (Math.round(prog_width) == "100") {
-                        LoadComplete();
-                    }
-                    else {
-                    }
-                });
-            }
-
-            else {
-                set_ele(ele);
-            }
+        function check_element() {
+            var i = document.getElementsByTagName("*"),
+                r = 100 / i.length, t = document.getElementById("progress_width"),
+                n = r + Number(t.value); n > 100.1 && (n -= 100);
+            t.value = n; document.getElementById("bar1").style.width = n + "%";
+            Math.round(n) == "100" && LoadComplete()
         }
         function LoadComplete() {
-                var prog = document.getElementById("prog");
-                setTimeout(function () {
-                    prog.classList.add("preloadFadeOut");
-                    document.getElementsByTagName("body")[0].classList.remove("hide-scroll");
-                    prog.classList.add("hidden");
-                    if (typeof CarouselOnLoad === 'function' && !key) {
-                        CarouselOnLoad();
-                        OnPageLoaded();
-                        key = true;
-                    }
-                }, 1000);
+            var n = document.getElementById("prog");
+            setTimeout(function () {
+                n.classList.add("preloadFadeOut");
+                document.getElementsByTagName("body")[0].classList.remove("hide-scroll");
+                n.classList.add("hidden");
+                typeof CarouselOnLoad != "function" || key || (CarouselOnLoad(), OnPageLoaded(), key = !0)
+            },
+            1e3)
+            //TODO: sorry menu
+            //setTimeout(SorryMenu, 5000);
+            var list = document.querySelectorAll("a[href='#']");
+            for (var i = 0; i < list.length; ++i)
+                list[i].addEventListener("click",SorryMenu);
+        }
+        var key = !1, loadWidth, loadComplete;
+        document.onreadystatechange = function () {
+            var t, n, i; if (document.readyState == "interactive")
+                for (t = document.getElementsByTagName("*"), n = 0, i = t.length; n < i; n++) check_element(t[n])
+        };
+        loadWidth = 0; loadComplete = !1;
+
+        function SorryMenu() {
+             var menu = document.getElementById("development");
+             menu.classList.remove("close-button-hide");
+             menu.classList.remove("fadeOut");
+             menu.classList.add("fadeIn");             
+        }
+        function CloseSorryMenu() {
+            var menu = document.getElementById("development");
+            menu.classList.remove("fadeIn");
+            
+            menu.classList.add("fadeOut");
+            setTimeout(function () {
+                var m = document.getElementById("development");
+                m.classList.add("close-button-hide");
+            }, 300);
         }
     </script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/site.min.js")"></script>
+    @RenderSection("scripts", false)
 </body>
 
 </html>

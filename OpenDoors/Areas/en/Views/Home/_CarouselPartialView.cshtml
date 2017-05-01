@@ -3,19 +3,4 @@
     var url = Model.Photo.Path.Replace("\\", "\\\\");
     var href = Url.Content(Model.Url);
 }
-<div class="image hidden-image" style="background-image: url('@Url.Content(url)')">
-    <div class="carousel-info">
-        <div class="text-animated title" >
-            @Model.Title
-        </div><br />
-        <div class="text-animated description">
-            @Model.Description
-        </div><br />
-        <div class="text-animated name">
-            @Model.FullName
-        </div>
-        <div class="readmore-button text-animated">
-            <a href="@href" class="more">Подробнее</a>
-        </div>
-    </div>
-</div>
+<div class="image hidden-image"style="background-image: url('@Url.Content(url)')"><div class="carousel-info"><div class="text-animated title" >@Model.Title</div><br/><div class="text-animated description">@Model.Description</div><br/><div class="text-animated name">@Model.FullName</div><div class="readmore-button text-animated"><a href="@href"class="more-en">More</a></div></div></div>

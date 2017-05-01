@@ -1,19 +1,51 @@
-﻿
+﻿@model IEnumerable<OpenDoors.EntityDb.Data.Slider>
 @{
-    ViewBag.Title = "Open Doors";
-    Layout = "~/Areas/en/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Main";
+    Layout = "~/Areas/en/Views/Shared/_NewLayout.cshtml";
 }
 @section styles{
-    <link href="~/Content/main-page-style.min.css" rel="stylesheet" />    
+    @Styles.Render("~/Content/css1")
 }
-@section angularConfig{
-    <script type="text/javascript" src="~/Scripts/en/main/system.config.js"></script>
-    <script>
-            System.import('app').catch(function (err) { console.error(err); });
-    </script>
-}
-        <app-carousel></app-carousel>
-        <volunteer></volunteer>
+<div class="carousel">
+    @foreach (var slider in Model)
+    {
+        Html.RenderPartial("_CarouselPartialView", slider);
+    }
+    <div class="slider-buttons">
+        <div class="positionize-square-left">
+            <div class="left-arrow-block" onclick="SliderArrow('left')">
+                <div class="left-arrow diamond-square">
+                    <div class="left-arrow left-arrow-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-numbers">
+            <div class="page-number" onclick="SlideToNumber(0)">01</div>
+            <div class="page-number" onclick="SlideToNumber(1)">02</div>
+            <div class="page-number" onclick="SlideToNumber(2)">03</div>
+            <div class="page-number" onclick="SlideToNumber(3)">04</div>
+        </div>
+        <div class="positionize-square-right">
+            <div class="right-arrow-block" onclick="SliderArrow('right')">
+                <div class="right-arrow right-arrow-line"></div>
+                <div class="right-arrow right-square right-square"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="volunteer-box">
+    <div class="center">
+        <div class="volunteer-info" onclick="VolunteerPage()">
+            <span>Become</span><br />
+            <span>a volunteer!</span><br />
+            <div class="volunteer-line"></div>
+        </div>
+        <div cass="volunteer-image-block">
+            <img src="/Content/Images/Main/main_small.jpg" class="volunteer-image" onclick="VolunteerPage()" />
+        </div>
+    </div>
+</div>
 @section scripts{
+    @Scripts.Render("~/Scripts/main")
 }
-@*<script src="~/Scripts/jquery.validate.min.js"></script>*@

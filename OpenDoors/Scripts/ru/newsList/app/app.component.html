@@ -1,0 +1,22 @@
+﻿<div id="container">
+    <!--mouseWheel (mouseWheelUp)="mouseWheelUpFunc(event)" (mouseWheelDown)="mouseWheelDownFunc(this)"-->
+    <div class="row preview-container">
+        <!--<div [style.background-image]="['url('+Path(path)+')']"></div>-->
+        <div [ngStyle]="{'background-image':'url('+path+')'}" id="preview" class="preview-hold"></div>
+    </div>
+    <div class="row">
+        <div *ngFor='let item of news' class="list">
+            <hr />
+            <div class="news-text">
+                {{item.Title}}
+                <br />
+                {{item.Information}}
+            </div>
+            <div class="read-more-links">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

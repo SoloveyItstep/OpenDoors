@@ -27,11 +27,11 @@ var CarouselList = (function () {
         this.key = true;
         this.carousel = data;
     };
-    CarouselList = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], CarouselList);
     return CarouselList;
 }());
+CarouselList = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], CarouselList);
 exports.CarouselList = CarouselList;
 //# sourceMappingURL=CarouselList.js.map

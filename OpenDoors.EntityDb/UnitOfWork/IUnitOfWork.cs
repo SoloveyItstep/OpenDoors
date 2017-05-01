@@ -15,6 +15,10 @@ namespace OpenDoors.EntityDb.UnitOfWork
         IPartnersRepository Partners { get; }
         ISliderRepository Slider { get; }
         IVolunteersRepository Volunteer { get; }
+        INewsRepository News { get; }
+        IGalleryRepository Gallery { get; }
+        ITagRepository Tag { get; }
+
         Int32 Compile();        
     }
 }

@@ -1,0 +1,86 @@
+﻿[
+  {
+    "outputFile": "Content/Test.css",
+    "inputFile": "Content/Test.scss"
+  },
+  {
+    "outputFile": "Content/NewsList/LeftMenuStyle.css",
+    "inputFile": "Content/NewsList/LeftMenuStyle.scss"
+  },
+  {
+    "outputFile": "Content/NewsList/main.css",
+    "inputFile": "Content/NewsList/main.scss"
+  },
+  {
+    "outputFile": "Content/NewsList/Fonts.css",
+    "inputFile": "Content/NewsList/Fonts.scss"
+  },
+  {
+    "outputFile": "Content/NewsList/FooterStyle.css",
+    "inputFile": "Content/NewsList/FooterStyle.scss"
+  },
+  {
+    "outputFile": "Content/NewsList/Header.css",
+    "inputFile": "Content/NewsList/Header.scss"
+  },
+  {
+    "outputFile": "Content/SecondLayoutStyle/Fonts.css",
+    "inputFile": "Content/SecondLayoutStyle/Fonts.scss"
+  },
+  {
+    "outputFile": "Content/SecondLayoutStyle/main.css",
+    "inputFile": "Content/SecondLayoutStyle/main.scss"
+  },
+  {
+    "outputFile": "Content/SecondLayoutStyle/LeftMenuStyle.css",
+    "inputFile": "Content/SecondLayoutStyle/LeftMenuStyle.scss"
+  },
+  {
+    "outputFile": "Content/SecondLayoutStyle/FooterStyle.css",
+    "inputFile": "Content/SecondLayoutStyle/FooterStyle.scss"
+  },
+  {
+    "outputFile": "Content/NewsList/list.main.css",
+    "inputFile": "Content/NewsList/list.main.scss"
+  },
+  {
+    "outputFile": "Scripts/ru/newsList/app/app.component.css",
+    "inputFile": "Scripts/ru/newsList/app/app.component.scss"
+  },
+  {
+    "outputFile": "Content/AngularLayout/main.css",
+    "inputFile": "Content/AngularLayout/main.scss"
+  },
+  {
+    "outputFile": "Scripts/ru/newsList/ListApp/LeftMenu/LeftMenuStyle.css",
+    "inputFile": "Scripts/ru/newsList/ListApp/LeftMenu/LeftMenuStyle.scss"
+  },
+  {
+    "outputFile": "Content/contacts/contacts.css",
+    "inputFile": "Content/contacts/contacts.scss"
+  },
+  {
+    "outputFile": "Scripts/ru/newsList/ListApp/app.component.style.css",
+    "inputFile": "Scripts/ru/newsList/ListApp/app.component.style.scss"
+  },
+  {
+    "outputFile": "Content/Mobile/Contacts/contacts.css",
+    "inputFile": "Content/Mobile/Contacts/contacts.scss"
+  },
+  {
+    "outputFile": "Scripts/ru/Mobile/Contacts.es5.js",
+    "inputFile": "Scripts/ru/Mobile/Contacts.js"
+  },
+  {
+    "outputFile": "Content/Mobile/m.header.css",
+    "inputFile": "Content/Mobile/m.header.scss"
+  },
+  {
+    "outputFile": "Scripts/ru/Mobile/layout.es5.js",
+    "inputFile": "Scripts/ru/Mobile/layout.js"
+  },
+  {
+    "outputFile": "Content/main/main-carousel.css",
+    "inputFile": "Content/main/main-carousel.scss"
+  }
+]

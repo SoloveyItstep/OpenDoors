@@ -28,21 +28,16 @@ namespace OpenDoors
                       "~/Content/bootstrap.min.css",
                       "~/Content/preloader.min.css"));
 
-            //bundles.Add(new ScriptBundle("~/bundles/angularEn").Include(
-            //        "~/node_modules/core-js/client/shim.min.js",
-            //        "~/node_modules/zone.js/dist/zone.js",
-            //        "~/node_modules/reflect-metadata/Reflect.js",
-            //        "~/node_modules/systemjs/dist/system.src.js",
-            //        "~/Scripts/en/systemjs.config.js"
-            //    ));
-
-            //bundles.Add(new ScriptBundle("~/bundles/angularRu").Include(
-            //        "~/node_modules/core-js/client/shim.min.js",
-            //        "~/node_modules/zone.js/dist/zone.js",
-            //        "~/node_modules/reflect-metadata/Reflect.js",
-            //        "~/node_modules/systemjs/dist/system.src.js",
-            //        "~/Scripts/ru/systemjs.config.js"
-            //    ));
+            bundles.Add(new StyleBundle("~/Content/css1").Include(
+                      "~/Content/main-page-style.css",
+                      "~/Content/main/main-carousel.min.css",
+                      "~/Content/main/volunteer-images.min.css"
+                ));
+            bundles.Add(new ScriptBundle("~/Scripts/main").Include(
+                    "~/Scripts/site.min.js",
+                    "~/Scripts/ru/main/Main-carousel.min.js",
+                    "~/Scripts/ru/main/volunteer-image.min.js"
+                ));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/node_modules/core-js/client/shim.min.js",
@@ -50,6 +45,28 @@ namespace OpenDoors
                     "~/node_modules/reflect-metadata/Reflect.js",
                     "~/node_modules/systemjs/dist/system.src.js"
                 ));
+
+            //bundles.Add(new StyleBundle("~/Content/News/Styles")
+            //    .Include("~/Content/SecondLayoutStyle/main.min.css"));
+
+            //bundles.Add(new StyleBundle("~/Content/LeftMenuStyle")
+            //    .Include("~/Content/SecondLayoutStyle/LeftMenuStyle.min.css"));
+
+            //bundles.Add(new StyleBundle("~/Content/FooterStyle")
+            //    .Include("~/Content/SecondLayoutStyle/FooterStyle.min.css"));
+
+            bundles.Add(new StyleBundle("~/Content/SecondLayoutStyle")
+                .Include("~/Content/SecondLayoutStyle/main.min.css")
+                .Include("~/Content/SecondLayoutStyle/LeftMenuStyle.min.css")
+                .Include("~/Content/SecondLayoutStyle/FooterStyle.min.css"));
+
+            bundles.Add(new ScriptBundle("~/Scripts/SecondLayout")
+                .Include("~/Scripts/ru/SecondLayout/leftMenu.js"));
+
+            
+
+
+            
         }
     }
 }

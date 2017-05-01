@@ -36,26 +36,26 @@ var Volunteer = (function () {
         else
             this.showBlock = false;
     };
-    __decorate([
-        core_1.ViewChild("element"), 
-        __metadata('design:type', core_1.ElementRef)
-    ], Volunteer.prototype, "element", void 0);
-    __decorate([
-        core_1.HostListener("window:scroll", ['$event']), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [Object]), 
-        __metadata('design:returntype', void 0)
-    ], Volunteer.prototype, "OnScrollEvent", null);
-    Volunteer = __decorate([
-        core_1.Component({
-            selector: "volunteer",
-            moduleId: module.id,
-            styleUrls: ['./volunteer-images.min.css'],
-            templateUrl: "./volunteer.html"
-        }), 
-        __metadata('design:paramtypes', [])
-    ], Volunteer);
     return Volunteer;
 }());
+__decorate([
+    core_1.ViewChild("element"),
+    __metadata("design:type", core_1.ElementRef)
+], Volunteer.prototype, "element", void 0);
+__decorate([
+    core_1.HostListener("window:scroll", ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], Volunteer.prototype, "OnScrollEvent", null);
+Volunteer = __decorate([
+    core_1.Component({
+        selector: "volunteer",
+        moduleId: module.id,
+        styleUrls: ['./volunteer-images.min.css'],
+        templateUrl: "./volunteer.html"
+    }),
+    __metadata("design:paramtypes", [])
+], Volunteer);
 exports.Volunteer = Volunteer;
 //# sourceMappingURL=volunteer-images.js.map

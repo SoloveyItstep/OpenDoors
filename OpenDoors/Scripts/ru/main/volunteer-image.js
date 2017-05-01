@@ -3,6 +3,7 @@ function OnPageLoaded() {
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if (scrolled > 0)
         ShowVolunteerImage();
+    
 }
 
 window.onscroll = function () {
@@ -19,12 +20,12 @@ function ShowVolunteerImage() {
     var block = document.getElementsByClassName("volunteer-info")[0];
     var image = document.getElementsByClassName("volunteer-image")[0];
     scrollZero = false;
-    setTimeout(function () {
+    //setTimeout(function () {
         block.classList.remove("hide-info-block");
         block.classList.add("show-info-block");
         image.classList.remove("hide-block");
         image.classList.add("show-block");
-    }, 300);
+    //}, 100);
 }
 function HideVolunteerImage() {
     var block = document.getElementsByClassName("volunteer-info")[0];

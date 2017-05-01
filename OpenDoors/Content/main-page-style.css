@@ -1,4 +1,5 @@
 ﻿/*---Fonts---*/
+/*url('/Content/Fonts/OpenSans-Regular/OpenSans.woff2') format('woff2'),*/
 @font-face {
 	font-family: 'Intro';
 	src: url('/Content/Fonts/Intro/Intro.eot');
@@ -35,7 +36,6 @@
 	font-family: 'OpenSans-Regular';
 	src: url('/Content/Fonts/OpenSans-Regular/OpenSans.eot');
 	src: url('/Content/Fonts/OpenSans-Regular/OpenSans.eot?#iefix') format('embedded-opentype'),
-		url('/Content/Fonts/OpenSans-Regular/OpenSans.woff2') format('woff2'),
 		url('/Content/Fonts/OpenSans-Regular/OpenSans.woff') format('woff'),
 		url('/Content/Fonts/OpenSans-Regular/OpenSans.ttf') format('truetype'),
 		url('/Content/Fonts/OpenSans-Regular/OpenSans.svg#OpenSans') format('svg');
@@ -85,7 +85,7 @@ a:visited{
 .left-panel{
     position: fixed;
     float: left;
-    z-index: 10;
+    z-index: 17;
     background-color: white;
     width: 400px;
     height: 100%;
@@ -137,16 +137,27 @@ a:visited{
     left: -120%;
     width: 100%;
     height: 100%;
-    z-index: 5;
+    z-index: 15;
 }
-app-carousel{
+#bar1 {
+    display: block;
+    -moz-transition: width 3s ease-in-out;
+    -o-transition: width 3s ease-in-out;
+    -webkit-transition: width 3s ease-in-out;
+    transition: width 3s ease-in-out;
+    -moz-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
+}
+/*app-carousel{
     height: 100% !important;
 }
 volunteer{
     height: 300px;
     width: 100%;
     padding-left: 100px;
-}
+}*/
 .site-body{
     width: 100%;
     height: 100%;
@@ -498,6 +509,7 @@ a:link, a:hover, a:active{
 }
 .header-button:hover{
     color:#11966f;
+    cursor:pointer;
 }
 .header-button-lang{
     margin-left: 30px;
@@ -510,7 +522,7 @@ a:link, a:hover, a:active{
     background-color: white;
     height: 20px;
 }
-.header-button{
+.header-button, .drpdwn{
     color: #11966f;
 }
 .share-button{
@@ -535,7 +547,11 @@ a:link, a:hover, a:active{
 }
 .semibold-text{
     font-family: OpenSans-Semibold;
-    font-size: 1.2em;
+    font-size: 1.1em;
+}
+.intro-text-min{
+    font-family: Intro;
+    font-size: 1.1em;
 }
 .gray{
     color:gray;
@@ -621,7 +637,7 @@ a:link, a:hover, a:active{
 #dropdown-arrow{
     display: inline-block;
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 50px;
     position: absolute;
     width: 10px;
     height: 10px;
@@ -669,8 +685,8 @@ a:link, a:hover, a:active{
   }
 }
 .show-gamburger {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-name: show-gamburger;
     animation-name: show-gamburger;
 }
@@ -812,13 +828,18 @@ a:link, a:hover, a:active{
 
 }
 .hide-gamburger {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
   -webkit-animation-name: hide-gamburger;
   animation-name: hide-gamburger;
 }
-.spinner-master2 * {transition:all 0.3s;-webkit-transition:all 0.3s;
-                    box-sizing:border-box;}
+.spinner-master2 * {
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+    box-sizing: border-box;
+}
 .spinner-master2 {position:relative;margin:40px auto; top: 10px; 
                   height:30px;width:30px;}
 .spinner-master2 input[type=checkbox] {display:none;}
@@ -831,10 +852,22 @@ a:link, a:hover, a:active{
 .spinner-master2 .diagonal.part-2 {position:relative;float:left;margin-top:5px;}
 .spinner-master2 input[type=checkbox]:checked ~ .spinner-spin2 > .horizontal {
     opacity: 0;}
-.spinner-master2 input[type=checkbox]:checked ~ .spinner-spin2 > .diagonal.part-1 {
-    transform:rotate(135deg);-webkit-transform:rotate(135deg);margin-top:10px;}
-.spinner-master2 input[type=checkbox]:checked ~ .spinner-spin2 > .diagonal.part-2 {
-    transform:rotate(-135deg);-webkit-transform:rotate(-135deg);margin-top:-12px;}
+    .spinner-master2 input[type=checkbox]:checked ~ .spinner-spin2 > .diagonal.part-1 {
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        margin-top: 10px;
+    }
+    .spinner-master2 input[type=checkbox]:checked ~ .spinner-spin2 > .diagonal.part-2 {
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        margin-top: -12px;
+    }
 
 @media (min-width: 0px) and (max-width: 1180px){
     .header{
@@ -879,10 +912,11 @@ a:link, a:hover, a:active{
 .dropdown-height{
     height: 200px;
     max-height: 200px;
-    transition: all 1s ease;
+    /*transition: all 1s ease;*/
     visibility: visible;
     opacity: 1;
     transition: all 1s ease;
+    transition-delay: .5s !important;
 }
 .dropup-height{
     height: 25px;
@@ -1032,6 +1066,9 @@ a:link, a:hover, a:active{
     transform:rotate(-45deg);
     margin-left: 4px;
 }
+.dropdown-arrow-left-en{
+    margin-left: 100px !important;
+}
 /*==========Scroll==========*/
 /*::-webkit-scrollbar {
     width: 12px;
@@ -1051,12 +1088,12 @@ a:link, a:hover, a:active{
 }*/
 ::-webkit-scrollbar
 {
-  width: 10px;  /* for vertical scrollbars */
-  height: 10px; /* for horizontal scrollbars */
+    width: 10px;  /* for vertical scrollbars */
+    height: 10px; /* for horizontal scrollbars */
 }
 ::-webkit-scrollbar-track
 {
-  background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 ::-webkit-scrollbar-thumb
@@ -1064,3 +1101,103 @@ a:link, a:hover, a:active{
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.5);
 }
+/*@media screen and (-webkit-min-device-pixel-ratio:0) and (min-color-index:0)
+{ 
+    #logo{
+        height: 320px;
+    }
+}*/
+
+@keyframes an {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+#drp, dt, dd, #drp-en{
+	margin:0;
+	padding:0;
+}
+#drp, #drp-en{
+	position:absolute;
+    margin-top: -16px;
+    background-color: white;
+    width:240px;
+    height: 20px;
+}
+#drp-en{
+    width: 190px;
+    padding-left: 5px;
+    margin-left: 20px;
+}
+#drp dt, #drp dd, #drp-en dt, #drp-en dt{
+    text-align: left;
+}
+#drp dd, #drp-en dd{
+    margin-left: 10px;
+    margin-top: 7px;
+}
+#drp:hover, #drp-en:hover{
+    display: block;
+    height: 180px;
+    transition: height ease-in-out .2s;
+    cursor:pointer;
+}
+dt{
+	/*width:160px;*/
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+dd{
+	display:none;
+}
+.arrow-ru{
+    margin-left: 25px !important;    
+}
+dd:hover .drpdwn{
+    color: #6e644d;
+}
+dl:hover .arrow-ru{
+    margin-left: 25px !important;
+}
+#drp:hover dd, #drp-en:hover dd{
+	display:block;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+	-webkit-animation-name: an;
+    animation-name: an;
+}
+dl dt{
+    margin-left: 20px;
+}
+.drpdwn{
+	display:block;
+	text-decoration: none;
+    text-align: left;
+}
+.drpdwn:hover{
+	text-decoration: none;
+}
+.arrow-en{
+    margin-left: 5px !important;
+}
+#drp-en:hover .arrow-en{
+    margin-left: 5px !important;
+}
+
+/*dt a{
+	padding-left:4px;
+}
+dd a{
+	padding:4px 8px;
+}*/
+

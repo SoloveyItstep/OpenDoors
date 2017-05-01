@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "file": "app.component.style.css",
+  "sources": ["app.component.style.scss"],
+  "names": [],
+  "mappings": "AAAA,KACC,OAAQ,GAET,eACC,YAAa,MACb,QAAS,YACN,QAAS,aACT,QAAS,YACT,QAAS,KACZ,eAAgB,IAChB,UAAW,OACX,UAAW,GAEZ,mBACC,iBAAkB,OAClB,MAAO,IACP,OAAQ,MACR,UAAW,OAEZ,oBACC,iBAAkB,KAClB,OAAQ,MACR,MAAO"
+}

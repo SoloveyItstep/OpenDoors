@@ -1,0 +1,87 @@
+﻿@if (Html.IsMobileOrTablet(Request))
+{
+   @*@{*@  
+ViewBag.Title = "Контакты Opendoors";
+Layout = "~/Areas/ru/Views/Shared/_MobileLayout.cshtml";
+//}
+    @section styles{
+        <link rel="stylesheet" type="text/css" href="~/Content/Mobile/Contacts/contacts.min.css" />
+    }
+        <div class="page-title">
+            КОНТАКТЫ
+        </div>
+        <div id="image"></div>
+    <div id="content-body" class="marg-top">
+    <div class="intro color-gray height">Мейл: opendoorsfund@gmail.com</div>
+    <div class="intro color-gray">Юридический адрес:</div>
+    <div class="opensans-semibold height">г.Киев, ул.Сортировочная 5а, 02081</div>
+    <div class="intro color-gray">Вы можете сделать пожертвование:</div>
+    <div class="opensans-semibold">НА КАРТУ ПРИВАТ:</div>
+    <div class="opensans-semibold">5211 5273 0776 1458, Светлана Анатольевна</div>
+    <div class="opensans-semibold marg-top">НА БАНКОВСКИЕ РЕКВИЗИТЫ:</div>
+    <div class="opensans-semibold">Код ЕГРПОУ 26476728</div>
+    <div class="opensans-semibold">р / с 26004011431780</div>
+    <div class="opensans-semibold">Банк ПАО «Укрсоцбанк» в г.Киеве</div>
+    <div class="opensans-semibold">МФО 300023</div>
+    <div class="opensans-semibold">Назначение платежа (просьба обязательно указывать):</div>
+    <div class="opensans-semibold height-not-required">«Добровольные пожертвования или безвозвратную финансовую помощь для осуществления уставной деятельности организации»</div>
+    <div class="opensans-semibold height marg-top">БЛАГОДАРИМ ЗА ПОДДЕРЖКУ!</div>
+    <div class="intro color-gray">Следите за новостями:</div>
+    <div class="opensans-semibold"><a class="social-lincs-contacts" href="https://www.facebook.com/opendoorsfund">Facebook</a></div>
+    <div class="opensans-semibold"><a class="social-lincs-contacts" href="https://vk.com/opendoorsfund">VK</a></div>
+    <div class="opensans-semibold"><a class="social-lincs-contacts" href="https://www.youtube.com/channel/UCM5h8RAS_S2V6dgAxrquYUw">Youtube</a></div>
+</div>
+}
+else
+{
+    
+        ViewBag.Title = "Контакты OpenDoors";
+        Layout = "~/Areas/ru/Views/Shared/_SecondLayout.cshtml";
+    
+    @section renderStyles{
+        <link href="~/Content/contacts/contacts.min.css" rel="stylesheet" />
+    }
+    <div id="body-row">
+        <div id="image">        
+        </div>
+        <div id="contacts-row">
+            <div id="header">
+                <div id="bread-crumbs">
+                    <div id="crumbs-main">
+                        <div id="rhomb"></div>
+                        <a class="opensans-semibold link" href="/ru/home/main">ГЛАВНАЯ</a>
+                        <div class="underline"></div>
+                    </div>
+                    <br />
+                    <div id="crumbs-contacts" class="opensans-semibold static-text">
+                        КОТНАКТЫ
+                    </div>
+                </div>
+                <div id="header-title">
+                    КОНТАКТЫ
+                </div>
+            </div>
+            <div id="content-body">
+                <div class="intro color-gray height">Мейл: opendoorsfund@gmail.com</div>
+                <div class="intro color-gray">Юридический адрес:</div>
+                <div class="opensans-semibold height">г.Киев, ул.Сортировочная 5а, 02081</div>
+                <div class="intro color-gray">Вы можете сделать пожертвование:</div>
+                <div class="opensans-semibold">НА КАРТУ ПРИВАТ:</div>
+                <div class="opensans-semibold">5211 5273 0776 1458, Светлана Анатольевна</div><br />
+                <div class="opensans-semibold">НА БАНКОВСКИЕ РЕКВИЗИТЫ:</div>
+                <div class="opensans-semibold">Код ЕГРПОУ 26476728</div>
+                <div class="opensans-semibold">р / с 26004011431780</div>
+                <div class="opensans-semibold">Банк ПАО «Укрсоцбанк» в г.Киеве</div>
+                <div class="opensans-semibold">МФО 300023</div>
+                <div class="opensans-semibold">Назначение платежа (просьба обязательно указывать):</div>
+                <div class="opensans-semibold height-not-required">«Добровольные пожертвования или безвозвратную финансовую помощь для осуществления уставной деятельности организации»</div>
+                <div class="opensans-semibold height">БЛАГОДАРИМ ЗА ПОДДЕРЖКУ!</div>
+                <div class="intro color-gray">Следите за новостями:</div>
+                <div class="opensans-semibold"><a class="social-lincs-contacts" href="https://www.facebook.com/opendoorsfund">Facebook</a></div>
+                <div class="opensans-semibold"><a class="social-lincs-contacts" href="https://vk.com/opendoorsfund">VK</a></div>
+                <div class="opensans-semibold"><a class="social-lincs-contacts" href="https://www.youtube.com/channel/UCM5h8RAS_S2V6dgAxrquYUw">Youtube</a></div>
+            </div>
+        </div>
+    </div>
+    
+}

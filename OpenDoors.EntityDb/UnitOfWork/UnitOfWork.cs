@@ -22,6 +22,9 @@ namespace OpenDoors.EntityDb.UnitOfWork
             Photo = new PhotoRepository(context);
             Slider = new SliderRepository(context);
             Volunteer = new VolunteerRepository(context);
+            Gallery = new GalleryRepository(context);
+            News = new NewsRepository(context);
+            Tag = new TagRepository(context);
         }
         public ILanguageRepository Language { get; private set; }
         public ILanguageDataRepository LanguageData { get; private set; }
@@ -29,6 +32,9 @@ namespace OpenDoors.EntityDb.UnitOfWork
         public IPhotoRepository Photo { get; private set; }
         public ISliderRepository Slider { get; private set; }
         public IVolunteersRepository Volunteer { get; private set; }
+        public INewsRepository News { get; private set; }
+        public IGalleryRepository Gallery { get; private set; }
+        public ITagRepository Tag { get; set; }
         public int Compile()
         {
             return context.SaveChanges();

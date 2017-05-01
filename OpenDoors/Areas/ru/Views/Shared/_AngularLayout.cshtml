@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <base "/"/>
+        <title>@Page.Title</title>
+        @RenderSection("head", required: false)
+        <link type="text/css" rel="stylesheet" href="~/Content/AngularLayout/main.min.css"/>
+        @Scripts.Render("~/bundles/angular")
+        @RenderSection("angular",false)
+    </head>
+    <body>
+        @RenderBody()
+    </body>
+</html>

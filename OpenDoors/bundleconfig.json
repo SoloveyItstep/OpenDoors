@@ -112,5 +112,17 @@
     "inputFiles": [
       "Content/main/volunteer-images.css"
     ]
+  },
+  {
+    "outputFileName": "Scripts/TMP.min.js",
+    "inputFiles": [
+      "Scripts/TMP.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/ru/newsList/leftMenu.min.js",
+    "inputFiles": [
+      "Scripts/ru/newsList/leftMenu.js"
+    ]
   }
 ]
