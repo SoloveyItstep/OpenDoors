@@ -1,80 +1,68 @@
-﻿<div id="left-menu" class="left-menu-onload">
-    <div id="left-menu-left">
-        <div id="language">
-            <ul id="lang-container">
-                <li id="language-main" onclick="ShowHideLanguage()"><a href="#">РУС</a></li>
-                <li id="language-item" class="hide-language">
-                    <a href="@ViewBag.lang">ENG</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <div class="link-area">
-                <a class="link-text" href="#">О ФОНДЕ</a>
-            </div>
-            <div>
-                <div class="drop-down-left link-area down">
-                    <div class="link-text drop-down-text" onclick="ShowHideDropDown()">
-                        МЫ ПОМОГАЕМ
-                        <span id="dropdown-arrow"></span>
-                    </div>
-                    <ul class="dropdown-area hide-dropdown">
-                        <li><a class="opensans" href="#">Детям сиротам</a></li>
-                        <li><a class="opensans" href="#">Кризисным семьям</a></li>
-                        <li><a class="opensans" href="#">Социальная адаптация</a></li>
-                        <li><a class="opensans" href="#">Инвалидам</a></li>
-                        <li><a class="opensans" href="#">Лагеря</a></li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="link-area">
-                <a class="link-text" href="#">НОВОСТИ</a>
-            </div>
-            <div class="link-area">
-                <a class="link-text" href="#">ГАЛЕРЕЯ</a>
-            </div>
-            <div class="link-area">
-                <a class="link-text" href="/ru/home/contacts">КОНТАКТЫ</a>
-            </div>
-            <div class="link-area">
-                <a class="link-text" href="#">ПОДДЕРЖАТЬ</a>
-            </div>
-        </div>
+﻿<div id="m-header">
+    <div id="logo" onclick="logoClick('en')">
     </div>
-    <div id="left-menu-right">
-        <div class="spinner-master2">
-            <input type="checkbox" id="spinner-form2" />
-            <label for="spinner-form2" class="spinner-spin2 spinner animated hide-gamburger">
-                <div class="spinner2 diagonal part-1"></div>
-                <div class="spinner2 horizontal"></div>
-                <div class="spinner2 diagonal part-2"></div>
-            </label>
-        </div>
-        <div id="logo-container">
-            <a href="@Url.Content("/ru/Home/Main")">
-                <img src="@Url.Content("~/Content/Images/logo.png")" id="logo" />
-            </a>
-        </div>
-        <div class="social">
-            <div class="slink-container">
-                <a href="https://www.facebook.com/opendoorsfund/" class="social-img">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="25px" height="25px" viewBox="0 0 96.227 96.227" style="enable-background:new 0 0 30 30; fill:#6e644d;"
-                         xml:space="preserve">
-                    <g>
-                    <path d="M73.099,15.973l-9.058,0.004c-7.102,0-8.477,3.375-8.477,8.328v10.921h16.938l-0.006,17.106H55.564v43.895H37.897V52.332
+    <div id="menu-container">
+        <div id="menu" class="delete-menu">
+            <div id="language">
+                <ul id="lang-container">
+                    <li id="language-main" onclick="ShowHideLanguage()"><a href="#">EN</a></li>
+                    <li id="language-item" class="delete-language">
+                        <a href="@ViewBag.lang">RUS</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-menu">
+                <div class="link-area">
+                    <a class="link-text" href="#">About</a>
+                </div>
+                <div>
+                    <div class="drop-down-left link-area down">
+                        <div class="link-text drop-down-text" onclick="ShowHideDropDown()">
+                            Helping
+                            <span id="dropdown-arrow"></span>
+                        </div>
+                        <ul class="dropdown-area hide-dropdown">
+                            <li><a class="opensans" href="#">Orphans</a></li>
+                            <li><a class="opensans" href="#">At-risk families</a></li>
+                            <li><a class="opensans" href="#">Social adaptation</a></li>
+                            <li><a class="opensans" href="#">Limited abilities</a></li>
+                            <li><a class="opensans" href="#">Camps</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="link-area">
+                    <a class="link-text" href="#">News</a>
+                </div>
+                <div class="link-area">
+                    <a class="link-text" href="#">Gallery</a>
+                </div>
+                <div class="link-area">
+                    <a class="link-text" href="/en/home/contacts">Contacts</a>
+                </div>
+                <div class="link-area">
+                    <a class="link-text" href="#">Support kids</a>
+                </div>
+            </div>
+            <div class="social">
+                <span class="slink-container">
+                    <a href="https://www.facebook.com/opendoorsfund/" class="social-img">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="25px" height="25px" viewBox="0 0 96.227 96.227" style="enable-background:new 0 0 30 30; fill:#6e644d;"
+                             xml:space="preserve">
+                        <g>
+                        <path d="M73.099,15.973l-9.058,0.004c-7.102,0-8.477,3.375-8.477,8.328v10.921h16.938l-0.006,17.106H55.564v43.895H37.897V52.332
 		                        h-14.77V35.226h14.77V22.612C37.897,7.972,46.84,0,59.9,0L73.1,0.021L73.099,15.973L73.099,15.973z" />
                         </g>
                     </svg>
-                </a>
-            </div><br/>
-            <div class="slink-container">
-                <a href="https://www.youtube.com/channel/UCM5h8RAS_S2V6dgAxrquYUw" class="social-img">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="25px" height="25px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310; fill:#6e644d;" xml:space="preserve">
-                    <g id="XMLID_822_">
-                    <path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
+                    </a>
+                </span>
+                <span class="slink-container">
+                    <a href="https://www.youtube.com/channel/UCM5h8RAS_S2V6dgAxrquYUw" class="social-img">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="25px" height="25px" viewBox="0 0 310 310" style="enable-background:new 0 0 310 310; fill:#6e644d;" xml:space="preserve">
+                        <g id="XMLID_822_">
+                        <path id="XMLID_823_" d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
 		                    C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527
 		                    C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991
 		                    c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764
@@ -82,16 +70,16 @@
 		                    C204.394,157.263,202.325,160.684,199.021,162.41z" />
                             </g>
                         </svg>
-                </a>
-            </div><br />
-            <div class="slink-container">
-                <a class="social-img" href="https://vk.com/opendoorsfund">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         width="25px" height="25px" viewBox="0 0 532.337 532.337" style="enable-background:new 0 0 532.337 532.337; fill:#6e644d;"
-                         xml:space="preserve">
-                    <g>
-                    <g>
-                    <path d="M471.998,241.286c7.57-9.786,13.58-17.638,18.018-23.562c31.965-42.498,45.82-69.646,41.574-81.482l-1.666-2.772
+                    </a>
+                </span>
+                <span class="slink-container">
+                    <a class="social-img" href="https://vk.com/opendoorsfund">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="25px" height="25px" viewBox="0 0 532.337 532.337" style="enable-background:new 0 0 532.337 532.337; fill:#6e644d;"
+                             xml:space="preserve">
+                        <g>
+                        <g>
+                        <path d="M471.998,241.286c7.57-9.786,13.58-17.638,18.018-23.562c31.965-42.498,45.82-69.646,41.574-81.482l-1.666-2.772
                         			c-1.107-1.665-3.977-3.194-8.592-4.578c-4.621-1.383-10.533-1.604-17.736-0.691l-79.822,0.563
                         			c-1.848-0.184-3.697-0.141-5.545,0.128c-1.848,0.281-3.047,0.563-3.605,0.832c-0.557,0.282-1.016,0.508-1.383,0.692l-1.107,0.832
                         			c-0.924,0.551-1.939,1.524-3.047,2.914c-1.109,1.389-2.039,2.999-2.773,4.853c-8.684,22.356-18.568,43.146-29.656,62.363
@@ -125,9 +113,21 @@
                         	    </g>
                             </g>
                         </svg>
-                </a>
+                    </a>
+                </span>
             </div>
+        </div>
+        <div id="gamburger" class="delete-gamb">
+            @**@
+        <div class="spinner-master2">
+            <input type="checkbox" id="spinner-form2" />
+            <label for="spinner-form2" class="spinner-spin2 spinner animated hide-gamburger">
+                <div class="spinner2 diagonal part-1"></div>
+                <div class="spinner2 horizontal"></div>
+                <div class="spinner2 diagonal part-2"></div>
+            </label>
         </div>
     </div>
 </div>
-<div id="close-menu-pall" class="move-close-menu-pall" onclick="ShowHideMenu(event)"></div>
+</div>
+<div id="close-menu-pall" class="hide-close-menu-pall" onclick="ShowHideMenu(event)"></div>

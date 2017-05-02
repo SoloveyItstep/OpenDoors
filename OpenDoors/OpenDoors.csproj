@@ -328,6 +328,8 @@
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\Main\main_small.jpg" />
     <Content Include="Content\Images\News\NewsPreview.jpg" />
+    <Content Include="Areas\en\Views\Home\_MobilePartial.cshtml" />
+    <Content Include="Areas\en\Views\Shared\_MobileLayout.cshtml" />
     <None Include="Content\main\main-carousel.scss" />
     <Content Include="Content\main-page-style.min.css">
       <DependentUpon>main-page-style.css</DependentUpon>
