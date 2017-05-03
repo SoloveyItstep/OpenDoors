@@ -527,7 +527,10 @@
     <Content Include="Content\Mobile\Contacts\Fonts.scss" />
     <None Include="Content\Mobile\m.header.scss" />
     <None Include="Content\NewsList\list.main.scss" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
+    <Content Include="Properties\PublishProfiles\site2.PublishSettings" />
+    <Content Include="Properties\PublishProfiles\site4.PublishSettings" />
     <None Include="Properties\PublishProfiles\Solovey-kiev.pubxml" />
     <None Include="Properties\PublishProfiles\open doors.pubxml" />
     <Content Include="Scripts\en\main\component.min.css">
