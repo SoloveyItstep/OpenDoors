@@ -416,10 +416,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\main-page-style.css" />
-    <Content Include="node_modules\core-js\client\shim.min.js" />
-    <Content Include="node_modules\reflect-metadata\Reflect.js" />
-    <Content Include="node_modules\systemjs\dist\system.src.js" />
-    <Content Include="node_modules\zone.js\dist\zone.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -442,32 +438,6 @@
     <Content Include="Areas\en\Views\Home\Index.cshtml" />
     <Content Include="Areas\ru\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\ru\Views\Home\Index.cshtml" />
-    <Content Include="node_modules\.bin\concurrent" />
-    <Content Include="node_modules\.bin\concurrent.cmd" />
-    <Content Include="node_modules\.bin\concurrently" />
-    <Content Include="node_modules\.bin\concurrently.cmd" />
-    <Content Include="node_modules\.bin\hs" />
-    <Content Include="node_modules\.bin\hs.cmd" />
-    <Content Include="node_modules\.bin\http-server" />
-    <Content Include="node_modules\.bin\http-server.cmd" />
-    <Content Include="node_modules\.bin\karma" />
-    <Content Include="node_modules\.bin\karma.cmd" />
-    <Content Include="node_modules\.bin\lite-server" />
-    <Content Include="node_modules\.bin\lite-server.cmd" />
-    <Content Include="node_modules\.bin\protractor" />
-    <Content Include="node_modules\.bin\protractor.cmd" />
-    <Content Include="node_modules\.bin\rimraf" />
-    <Content Include="node_modules\.bin\rimraf.cmd" />
-    <Content Include="node_modules\.bin\tsc" />
-    <Content Include="node_modules\.bin\tsc.cmd" />
-    <Content Include="node_modules\.bin\tslint" />
-    <Content Include="node_modules\.bin\tslint.cmd" />
-    <Content Include="node_modules\.bin\tsserver" />
-    <Content Include="node_modules\.bin\tsserver.cmd" />
-    <Content Include="node_modules\.bin\typings" />
-    <Content Include="node_modules\.bin\typings.cmd" />
-    <Content Include="node_modules\.bin\webdriver-manager" />
-    <Content Include="node_modules\.bin\webdriver-manager.cmd" />
     <Content Include="Content\Fonts\Intro\Intro.eot" />
     <Content Include="Content\Fonts\Intro\Intro.ttf" />
     <Content Include="Content\Fonts\Intro\Intro.woff" />
@@ -856,7 +826,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61954</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
