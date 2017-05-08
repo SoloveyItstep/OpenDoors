@@ -82,5 +82,9 @@
   {
     "outputFile": "Content/main/main-carousel.css",
     "inputFile": "Content/main/main-carousel.scss"
+  },
+  {
+    "outputFile": "Content/Mobile/Contacts/LeftMenuStyle.css",
+    "inputFile": "Content/Mobile/Contacts/LeftMenuStyle.scss"
   }
 ]

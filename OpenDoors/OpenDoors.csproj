@@ -323,6 +323,7 @@
     <Content Include="Content\Images\Carousel\banner3.jpg" />
     <Content Include="Content\Images\Carousel\banner4.jpg" />
     <Content Include="Content\Images\Contacts\bg_contact.jpg" />
+    <Content Include="Content\Images\Contacts\contact_bg_mobile.jpg" />
     <Content Include="Content\Images\happy_kids.gif" />
     <Content Include="Content\Images\logo.m.png" />
     <Content Include="Content\Images\logo.png" />
@@ -497,12 +498,8 @@
     <Content Include="Content\Mobile\Contacts\Fonts.scss" />
     <None Include="Content\Mobile\m.header.scss" />
     <None Include="Content\NewsList\list.main.scss" />
-    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
-    <None Include="Properties\PublishProfiles\local.pubxml" />
     <Content Include="Properties\PublishProfiles\site2.PublishSettings" />
     <Content Include="Properties\PublishProfiles\site4.PublishSettings" />
-    <None Include="Properties\PublishProfiles\Solovey-kiev.pubxml" />
-    <None Include="Properties\PublishProfiles\open doors.pubxml" />
     <Content Include="Scripts\en\main\component.min.css">
       <DependentUpon>component.css</DependentUpon>
     </Content>
@@ -524,10 +521,16 @@
     <Content Include="Scripts\en\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.ttf" />
     <Content Include="Scripts\en\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff" />
     <Content Include="Scripts\en\main\Fonts\OpenSans-Semibold\OpenSans-Semibold.woff2" />
+    <Content Include="ls.pubignore.wpp.targets" />
+    <Content Include="npm-debug.log.3583315016" />
+    <Content Include="package.comment.json" />
+    <None Include="Properties\PublishProfiles\OpenDoorsUkraine.com.pubxml" />
+    <None Include="Properties\PublishProfiles\solovey-kiev.net.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Content Include="publish.ignore" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -829,11 +832,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61954</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61954/</IISUrl>
+          <IISUrl>http://192.168.1.104:61954/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
