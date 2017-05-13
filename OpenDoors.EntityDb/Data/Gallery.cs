@@ -8,14 +8,18 @@ using System.Threading.Tasks;
 
 namespace OpenDoors.EntityDb.Data
 {
+    [Table(name: "Gallery")]
     public class Gallery
     {
         [Key]
+        [Column(name: "GalleryId")]
         public Int32 GalleryId { get; set; }
 
+        [Column(name: "Date")]
         public DateTime Date { get; set; }
 
         [StringLength(200)]
+        [Column(name: "Title")]
         public String Title { get; set; }
 
         public int TagId { get; set; }

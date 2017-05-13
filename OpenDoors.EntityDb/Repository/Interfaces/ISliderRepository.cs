@@ -10,5 +10,7 @@ namespace OpenDoors.EntityDb.Repository.Interfaces
     public interface ISliderRepository: IRepository<Slider>
     {
         IEnumerable<Slider> GetAllInLanguage(String languageCode);
+        IEnumerable<Slider> GetAllDesctop(String languageCode);
+        IEnumerable<Slider> GetAllMobile(String languageCode);
     }
 }

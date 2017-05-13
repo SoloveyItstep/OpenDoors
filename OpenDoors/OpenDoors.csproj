@@ -243,21 +243,9 @@
     </Compile>
     <Compile Include="Helpers\DeviceHelper.cs" />
     <Compile Include="Inject\AutofacConf.cs" />
-    <Compile Include="Migrations\201701161544056_GalleryNews.cs" />
-    <Compile Include="Migrations\201701161544056_GalleryNews.Designer.cs">
-      <DependentUpon>201701161544056_GalleryNews.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701171313114_Tags.cs" />
-    <Compile Include="Migrations\201701171313114_Tags.Designer.cs">
-      <DependentUpon>201701171313114_Tags.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701171317123_TagsLength.cs" />
-    <Compile Include="Migrations\201701171317123_TagsLength.Designer.cs">
-      <DependentUpon>201701171317123_TagsLength.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701171400081_NewsToGalleryAllowNull.cs" />
-    <Compile Include="Migrations\201701171400081_NewsToGalleryAllowNull.Designer.cs">
-      <DependentUpon>201701171400081_NewsToGalleryAllowNull.cs</DependentUpon>
+    <Compile Include="Migrations\201705102049177_createDb.cs" />
+    <Compile Include="Migrations\201705102049177_createDb.Designer.cs">
+      <DependentUpon>201705102049177_createDb.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -800,17 +788,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701161544056_GalleryNews.resx">
-      <DependentUpon>201701161544056_GalleryNews.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701171313114_Tags.resx">
-      <DependentUpon>201701171313114_Tags.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701171317123_TagsLength.resx">
-      <DependentUpon>201701171317123_TagsLength.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701171400081_NewsToGalleryAllowNull.resx">
-      <DependentUpon>201701171400081_NewsToGalleryAllowNull.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705102049177_createDb.resx">
+      <DependentUpon>201705102049177_createDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -836,7 +815,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61954</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://192.168.1.104:61954/</IISUrl>
+          <IISUrl>http://192.168.1.104:61955/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

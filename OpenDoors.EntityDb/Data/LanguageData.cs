@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OpenDoors.EntityDb.Data
 {
+    [Table(name: "LanguageData")]
     public class LanguageData
     {
         public LanguageData()
@@ -17,6 +19,7 @@ namespace OpenDoors.EntityDb.Data
         }
 
         [Key]
+        [Column(name: "LanguageDataId")]
         public Int32 LanguageDataId { get; set; }
 
         public virtual ICollection<Slider> Sliders { get; set; }

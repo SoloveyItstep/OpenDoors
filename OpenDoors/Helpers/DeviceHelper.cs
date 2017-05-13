@@ -23,5 +23,21 @@ namespace OpenDoors
             }
             return false;
         }
+
+        public static Boolean IsMobileOrTablet(HttpRequestBase request)
+        {
+            string strUserAgent = request.UserAgent.ToString().ToLower();
+            if (strUserAgent != null)
+            {
+                if (request.Browser.IsMobileDevice == true || strUserAgent.Contains("iphone") ||
+                    strUserAgent.Contains("blackberry") || strUserAgent.Contains("mobile") ||
+                    strUserAgent.Contains("windows ce") || strUserAgent.Contains("opera mini") ||
+                    strUserAgent.Contains("palm") || strUserAgent.Contains("android"))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

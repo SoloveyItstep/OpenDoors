@@ -1,4 +1,5 @@
-﻿@*@if (Html.IsMobileOrTablet(Request))
+﻿@model IEnumerable<OpenDoors.EntityDb.Data.Slider>
+@*@if (Html.IsMobileOrTablet(Request))
 {
     ViewBag.Title = "Главная Opendoors";
     Layout = "~/Areas/ru/Views/Shared/_MobileLayout.cshtml";
@@ -9,7 +10,6 @@
 else
 {*@
 @{
-    @model IEnumerable<OpenDoors.EntityDb.Data.Slider>
         ViewBag.Title = "Главная Opendoors";
         Layout = "~/Areas/ru/Views/Shared/_NewLayout.cshtml";
 }

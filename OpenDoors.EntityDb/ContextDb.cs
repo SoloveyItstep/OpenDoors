@@ -5,10 +5,10 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace OpenDoors.EntityDb
 {
-    public class ContextDb:DbContext, IContextDb
+    public class ContextDb : DbContext, IContextDb
     {
         public ContextDb()
-            :base(@"Data Source=DESKTOP-8GG7PPQ\SQLEXPRESS;Initial Catalog=OpenDoorsFund;Integrated Security=True")
+            : base(@"Data Source=DESKTOP-4PI41MR\SQLEXPRESS;Initial Catalog=OpenDoorsFund;Integrated Security=True")
         {
             //examples not for Context class
 
@@ -17,7 +17,9 @@ namespace OpenDoors.EntityDb
 
         }
         public ContextDb(String ConnectionName)
-            :base(ConnectionName){
+            : base(ConnectionName)
+        {
+            //Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<ContextDb>());
             //Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<ContextDb>());
         }
 

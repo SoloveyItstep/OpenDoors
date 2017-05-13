@@ -35,9 +35,12 @@ namespace OpenDoors.Areas.ru.Controllers
             //ViewBag.lang = @"/en/Home/Main";
             //if (!Device())
             //    return View();
-            
-            List<Slider> slider = unitOfWork.Slider.
-                GetAllInLanguage("ru").ToList();
+
+            List<Slider> slider = null;
+            if (DeviceHelper.IsMobileOrTablet(Request))
+                slider = unitOfWork.Slider.GetAllMobile("ru").ToList();
+            else
+                slider = unitOfWork.Slider.GetAllDesctop("ru").ToList();
             return View(slider);
         }
 

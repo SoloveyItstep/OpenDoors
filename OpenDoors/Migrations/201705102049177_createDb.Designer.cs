@@ -7,13 +7,13 @@ namespace OpenDoors.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class GalleryNews : IMigrationMetadata
+    public sealed partial class createDb : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(GalleryNews));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(createDb));
         
         string IMigrationMetadata.Id
         {
-            get { return "201701161544056_GalleryNews"; }
+            get { return "201705102049177_createDb"; }
         }
         
         string IMigrationMetadata.Source
