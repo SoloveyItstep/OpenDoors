@@ -1,18 +1,42 @@
 ﻿@model IEnumerable<OpenDoors.EntityDb.Data.Slider>
-@*@if (Html.IsMobileOrTablet(Request))
-{
+@*@if (Html.IsMobileOrTablet(Request))*@
+@{
     ViewBag.Title = "Главная Opendoors";
     Layout = "~/Areas/ru/Views/Shared/_MobileLayout.cshtml";
-    <div>
-        <span>Mobile Version</span>
+}
+    @section styles{
+        <link rel="stylesheet" type="text/css" href="~/Content/Mobile/Main/m.main.min.css" />
+    }
+    <div class="carousel">
+        @foreach (var item in Model)
+        {
+            var url = item.Photo.Path.Replace("\\", "/");
+            //url = "http://192.168.1.104:61955" + url;
+                    <div class="image" style="background-image:url('@Url.Content(url)')"></div>
+        }
     </div>
-}
+    <div class="carousel-text-block">
+        @foreach (var item in Model)
+        {
+            <div class="text-description">
+                @item.Description
+            </div>
+            <div class="text-name">
+                @item.Title.ToUpper()
+            </div>
+            <div class="button-link">
+                @item.Url
+            </div>
+        }
+    </div>
+    @section scripts{
+        <script type="text/javascript" src="~/Scripts/ru/Mobile/m.main.js"></script>
+    }
+@*}
 else
-{*@
-@{
-        ViewBag.Title = "Главная Opendoors";
-        Layout = "~/Areas/ru/Views/Shared/_NewLayout.cshtml";
-}
+{
+    ViewBag.Title = "Главная Opendoors";
+    Layout = "~/Areas/ru/Views/Shared/_NewLayout.cshtml";
     @section styles{@Styles.Render("~/Content/css1")}
     <div class="carousel">
         @foreach (var slider in Model)
@@ -44,5 +68,5 @@ else
             <div class="volunteer-info" onclick="VolunteerPage()"><span>КАК СТАТЬ</span><br /><span>ВОЛОНТЕРОМ?</span><br /><div class="volunteer-line"></div></div><div cass="volunteer-image-block"><img src="/Content/Images/Main/main_small.jpg" class="volunteer-image" onclick="VolunteerPage()" /></div>
         </div>
     </div>@section scripts{@Scripts.Render("~/Scripts/main")}
-@*}*@
+}*@
 

@@ -157,13 +157,13 @@
       <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="WebGrease">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
-    </Reference>
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -307,9 +307,13 @@
     <Content Include="Content\icons\vk.svg" />
     <Content Include="Content\icons\youtube.svg" />
     <Content Include="Content\Images\Carousel\banner1.jpg" />
+    <Content Include="Content\Images\Carousel\banner1_m.jpg" />
     <Content Include="Content\Images\Carousel\banner2.jpg" />
+    <Content Include="Content\Images\Carousel\banner2_m.jpg" />
     <Content Include="Content\Images\Carousel\banner3.jpg" />
+    <Content Include="Content\Images\Carousel\banner3_m.jpg" />
     <Content Include="Content\Images\Carousel\banner4.jpg" />
+    <Content Include="Content\Images\Carousel\banner4_m.jpg" />
     <Content Include="Content\Images\Contacts\bg_contact.jpg" />
     <Content Include="Content\Images\Contacts\contact_bg_mobile.jpg" />
     <Content Include="Content\Images\happy_kids.gif" />
@@ -355,11 +359,23 @@
     <Content Include="Content\Mobile\Contacts\Fonts.min.css">
       <DependentUpon>Fonts.css</DependentUpon>
     </Content>
+    <Content Include="Content\Mobile\Fonts.css">
+      <DependentUpon>Fonts.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\Fonts.min.css">
+      <DependentUpon>Fonts.css</DependentUpon>
+    </Content>
     <Content Include="Content\Mobile\m.header.css">
       <DependentUpon>m.header.scss</DependentUpon>
     </Content>
     <Content Include="Content\Mobile\m.header.min.css">
       <DependentUpon>m.header.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\Main\m.main.css">
+      <DependentUpon>m.main.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Mobile\Main\m.main.min.css">
+      <DependentUpon>m.main.css</DependentUpon>
     </Content>
     <Content Include="Content\NewsList\Header.css">
       <DependentUpon>Header.scss</DependentUpon>
@@ -484,7 +500,9 @@
     <Content Include="Content\Fonts.scss" />
     <Content Include="Content\Mobile\Contacts\LeftMenuStyle.scss" />
     <Content Include="Content\Mobile\Contacts\Fonts.scss" />
+    <Content Include="Content\Mobile\Fonts.scss" />
     <None Include="Content\Mobile\m.header.scss" />
+    <None Include="Content\Mobile\Main\m.main.scss" />
     <None Include="Content\NewsList\list.main.scss" />
     <Content Include="Properties\PublishProfiles\site2.PublishSettings" />
     <Content Include="Properties\PublishProfiles\site4.PublishSettings" />
@@ -512,6 +530,7 @@
     <Content Include="ls.pubignore.wpp.targets" />
     <Content Include="npm-debug.log.3583315016" />
     <Content Include="package.comment.json" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Properties\PublishProfiles\OpenDoorsUkraine.com.pubxml" />
     <None Include="Properties\PublishProfiles\solovey-kiev.net.pubxml" />
     <None Include="Properties\Settings.settings">
@@ -622,6 +641,12 @@
       <DependentUpon>layout.es5.js</DependentUpon>
     </Content>
     <Content Include="Scripts\ru\Mobile\layout.js" />
+    <Content Include="Scripts\ru\Mobile\m.main.es5.js">
+      <DependentUpon>m.main.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ru\Mobile\m.main.es5.min.js">
+      <DependentUpon>m.main.es5.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\ru\newsList\app\app.component.css">
       <DependentUpon>app.component.scss</DependentUpon>
     </Content>
@@ -729,6 +754,7 @@
     <Content Include="Scripts\ru\newsList\ListApp\LeftMenu\LeftMenuStyle.scss" />
     <Content Include="Scripts\ru\newsList\ListApp\LeftMenu\Fonts.scss" />
     <Content Include="Scripts\ru\newsList\ListApp\Header\header-style.scss" />
+    <Content Include="Scripts\ru\Mobile\m.main.js" />
     <None Include="Scripts\ru\newsList\ListApp\app.component.style.scss" />
   </ItemGroup>
   <ItemGroup>
