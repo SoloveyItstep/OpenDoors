@@ -1,9 +1,8 @@
 ﻿@model IEnumerable<OpenDoors.EntityDb.Data.Slider>
-@*@if (Html.IsMobileOrTablet(Request))*@
-@{
+@if (Html.IsMobileOrTablet(Request))
+{
     ViewBag.Title = "Главная Opendoors";
     Layout = "~/Areas/ru/Views/Shared/_MobileLayout.cshtml";
-}
     @section styles{
         <link rel="stylesheet" type="text/css" href="~/Content/Mobile/Main/m.main.min.css" />
     }
@@ -24,15 +23,20 @@
             <div class="text-name">
                 @item.Title.ToUpper()
             </div>
-            <div class="button-link">
-                @item.Url
-            </div>
+            <a href="@item.Url" class="button-link">ПОДРОБНЕЕ</a>
         }
+    </div>
+    <div class="volunteer-block">
+        <div id="volunteer-image"></div>
+        <div id="volunteer-link-block" onclick="folow()">
+            <div class="volunteer-text1">КАК СТАТЬ</div>
+            <div class="volunteer-text2">ВОЛОНТЕРОМ?</div>
+        </div>
     </div>
     @section scripts{
         <script type="text/javascript" src="~/Scripts/ru/Mobile/m.main.js"></script>
     }
-@*}
+}
 else
 {
     ViewBag.Title = "Главная Opendoors";
@@ -68,5 +72,5 @@ else
             <div class="volunteer-info" onclick="VolunteerPage()"><span>КАК СТАТЬ</span><br /><span>ВОЛОНТЕРОМ?</span><br /><div class="volunteer-line"></div></div><div cass="volunteer-image-block"><img src="/Content/Images/Main/main_small.jpg" class="volunteer-image" onclick="VolunteerPage()" /></div>
         </div>
     </div>@section scripts{@Scripts.Render("~/Scripts/main")}
-}*@
+}
 

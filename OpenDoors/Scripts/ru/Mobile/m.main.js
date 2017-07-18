@@ -43,6 +43,13 @@ function onTextLoad() {
         texts[i].style.marginLeft = "-300%";
         links[i].style.marginLeft = "-300%";
     }
+    setTimeout(function () {
+        for (var i = 0; i < 4; ++i) {
+            descriptions[i].classList.add('text-transition-1');
+            texts[i].classList.add('text-transition-2');
+            links[i].classList.add('text-transition-3');
+        }
+    }, 20);
 }
 
 function Cycle() {
@@ -65,9 +72,21 @@ function Cycle() {
                 images[obj.nex].classList.remove('trans');
                 images[obj.nex].style.marginLeft = -100 + '%';
             }
+            ShowText(obj);
+            HideText(obj);
             break;
         }
     }
+}
+function ShowText(obj) {
+    descriptions[obj.cur].style.marginLeft = "0%";
+    texts[obj.cur].style.marginLeft = "0%";
+    links[obj.cur].style.marginLeft = "0%";
+}
+function HideText(obj) {
+    descriptions[obj.prev].style.marginLeft = "-300%";
+    texts[obj.prev].style.marginLeft = "-300%";
+    links[obj.prev].style.marginLeft = "-300%";
 }
 function Unmantioned(current, previous, next) {
     for (var i = 0; i < 4; ++i) {
@@ -122,6 +141,8 @@ function swipeEnd(event) {
         images[obj.prev].style.marginLeft = "100%";
         images[obj.cur].style.marginLeft = "0%";
         images[obj.nex].style.marginLeft = "-100%";
+        ShowText({ cur: obj.cur, prev: obj.prev, nex: 0 });
+        HideText({ cur: obj.cur, prev: obj.prev, nex: 0 });
     }
     else if (current < 0 && current <= -quoter) {
         images[obj.prev].style.marginLeft = "0%";
@@ -134,6 +155,8 @@ function swipeEnd(event) {
             else
                 currents[i] = false;
         }
+        ShowText({ cur: obj.prev, prev: 0, nex: 0 });
+        HideText({ cur: 0, prev: obj.cur, nex: 0 });
     }
     else if (current > quoter) {
         images[obj.prev].style.marginLeft = 100 + "%";
@@ -145,6 +168,8 @@ function swipeEnd(event) {
             else
                 currents[i] = false;
         }
+        ShowText({ cur: obj.nex, prev: 0, nex: 0 });
+        HideText({ cur: 0, prev: obj.cur, nex: 0 });
     }
     //===============
     setTimeout(function () {
@@ -180,4 +205,8 @@ function positionizeImages() {
         images[obj.nex].classList.add("trans");
         images[obj.prev].classList.add("trans");
     }, 1);
+}
+
+function folow() {
+
 }

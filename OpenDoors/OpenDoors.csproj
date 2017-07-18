@@ -320,6 +320,7 @@
     <Content Include="Content\Images\logo.m.png" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\Main\main_small.jpg" />
+    <Content Include="Content\Images\Main\volon_mob.jpg" />
     <Content Include="Content\Images\News\NewsPreview.jpg" />
     <Content Include="Areas\en\Views\Home\_MobilePartial.cshtml" />
     <Content Include="Areas\en\Views\Shared\_MobileLayout.cshtml" />
